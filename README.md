@@ -3,7 +3,9 @@
 ## Domain Proyek
 
 Kinerja siswa dalam lingkungan pendidikan memainkan peran penting dalam menentukan keberhasilan akademik dan masa depan mereka. Dalam era digital saat ini, institusi pendidikan memiliki akses ke berbagai data terkait aktivitas belajar siswa, seperti nilai ujian, kehadiran, partisipasi dalam kegiatan ekstrakurikuler, dan data demografis. Namun, potensi data ini seringkali belum dimanfaatkan secara maksimal untuk memberikan wawasan yang dapat membantu meningkatkan hasil belajar siswa.
+
 Pendekatan tradisional dalam mengevaluasi kinerja siswa cenderung bersifat reaktif, hanya memberikan perhatian setelah masalah terjadi, seperti penurunan nilai atau tingkat kehadiran yang rendah. Oleh karena itu, diperlukan solusi yang bersifat prediktif untuk mengidentifikasi potensi risiko lebih awal, sehingga institusi pendidikan dapat mengambil langkah-langkah preventif untuk mendukung siswa secara proaktif.
+
 Predictive analytics memungkinkan institusi pendidikan untuk mengidentifikasi pola performa siswa berdasarkan data historis. Teknologi ini membantu dalam pengambilan keputusan yang proaktif untuk memberikan intervensi yang tepat waktu dan mendukung siswa dalam mencapai hasil terbaik. Pada kasus ini penulis menerapkan 4 model pembelajaran machine learning yakni Random Forest, K-Nearest-Neighboars (KNN), Support Vector Machine (SVM) dan Extreme Gradient Boosting (XGBoost). Pendekatan ini mengintegrasikan keunggulan dari berbagai model untuk membandingkan dan menemukan algoritma terbaik dalam memprediksi performa siswa berdasarkan dataset yang diperoleh dari kaggel dan dapat diakses pada link [berikut](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset). Dengan menggunakan model ini, diharapkan hasil prediksi yang akurat dapat membantu institusi pendidikan dalam merancang strategi pembelajaran yang lebih efektif dan personalisasi untuk siswa.
 
 ## Business Understanding
@@ -22,7 +24,7 @@ Berdasarkan latar belakang tersebut, maka rincian permasalahan yang dapat dibaha
 
 ### Goals
 Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek ini.
-1. Memberikan durasi belajar yang lebih efektif.
+1. Menampilkan durasi belajar yang lebih efektif.
 2. Mendeteksi pola absensi yang berdampak pada penurunan performa akademik.
 3. Menilai efektivitas bimbingan belajar untuk meningkatkan performa siswa.
 4. Mengidentifikasi apakah ada kesenjangan gender dalam pencapaian akademik.
@@ -33,34 +35,36 @@ Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek in
 9. Menemukan model terbaik berdasarkan akurasi tertinggi untuk memprediksi kinerja siswa.
 
 ### Solution Statement
-1. Melakukan proses *Exploratory Data Analysis* (EDA) untuk mengetahui total persentase responden yang mengalami obesitas atau *overweight*, mencari perbedaan tingkat obesitas yang ada pada jenis kelamin yang berbeda, mengetahui faktor-faktor yang memengaruhi berat badan seseorang, dan mencari suatu faktor tertentu yang sama pada tingkat obesitas tertentu.
-2. Menggunakan 4 model *machine learning* untuk memprediksi penyakit obesitas pada responden, yaitu *Extreme Gradient Boosting* (XGBoost), *Support Vector Machine* (SVM), *K-Nearest Neighbors* (KNN), dan *Random Forest*.
+1. Melakukan proses *Exploratory Data Analysis* (EDA) untuk menampilkan durasi belajar yang lebih efektif, mendeteksi pola absensi yang berdampak pada penurunan performa akademik, menilai efektivitas bimbingan belajar untuk meningkatkan performa siswa, mengidentifikasi apakah ada kesenjangan gender dalam pencapaian akademik, menilai dampak kegiatan non-akademik terhadap kinerja akademik, mengukur pentingnya keterlibatan orang tua dalam keberhasilan belajar siswa, membangun model prediksi untuk memantau dan meningkatkan kinerja siswa, memahami sinergi antara bimbingan belajar dan durasi belajar mandiri, menemukan model terbaik berdasarkan akurasi tertinggi untuk memprediksi kinerja siswa.
+2. Menggunakan 4 model *machine learning* yaitu *Extreme Gradient Boosting* (XGBoost), *Support Vector Machine* (SVM), *K-Nearest Neighbors* (KNN), dan *Random Forest* untuk memprediksi kinerja siswa
 3. Menggunakan confusion matrix dan f1 score pada masing-masing model *machine learning* untuk menemukan model terbaik berdasarkan akurasi tertinggi.
 
 ## Data Understanding
-Dataset yang digunakan untuk memprediksi tingkat obesitas atau *overweight* pada responden diambil dari platform [kaggle](https://www.kaggle.com/) yang dipublikasikan oleh ARAVINDPCODER dengan usability score 10/10. Data ini didapat dari survei menggunakan platform web kepada orang-orang dari negara Mexico, Peru, dan Colombia, dengan usia di rentang 14 hingga 61 tahun dan dari berbagai jenis kondisi fisik. Dataset ini terdiri dari 1 file csv.<br>
+Dataset yang digunakan untuk mempredisksi kinerja siswa diambil dari platform [kaggle](https://www.kaggle.com/) yang dipublikasikan oleh Rabie El Kharoua pada tanggal 13 Juni 2024. Kumpulan data ini berisi informasi lengkap tentang 2.392 siswa sekolah menengah, yang merinci demografi, kebiasaan belajar, keterlibatan orang tua, kegiatan ekstrakurikuler, dan prestasi akademik mereka. Variabel target, GradeClass, mengklasifikasikan nilai siswa ke dalam kategori yang berbeda, sehingga menyediakan kumpulan data yang kuat untuk penelitian pendidikan, pemodelan prediktif, dan analisis statistik. Dataset ini terdiri dari 1 file csv.<br>
 
 ### Informasi Keterangan Variabel pada Data
-Dataset ini memiliki 17 variabel dengan keterangan sebagai berikut.
+Dataset ini memiliki 15 variabel dengan keterangan sebagai berikut.
 Variabel | Keterangan
 ----------|----------
-Gender | Jenis kelamin responden (laki-laki atau perempuan)
-Age | Usia responden
-Height | Tinggi responden (meter)
-Weight | Berat responden (kilogram)
-family_history_with_overweight | Apakah terdapat anggota keluarga responden yang juga terkena obesitas
-FAVC | Apakah responden mengonsumsi makanan berkalori tinggi
-FCVC | Frekuensi konsumsi sayur-sayuran dalam sehari
-NCP | Frekuensi konsumsi makanan berat dalam sehari
-CAEC | Konsumsi makanan di antara makan berat
-SMOKE | Apakah responden merupakan perokok 
-CH2O | Frekuensi Konsumsi air dalam sehari (liter)
-SCC	| Apakah responden memantau asupan kalori
-FAF	| Frekuensi aktivitas fisik dalam seminggu (0 = Tidak pernah, 1 = 1-2 hari, 2 = 3-4 hari, 3 = 5-6 hari)
-TUE	| Waktu pemakaian gadget dalam sehari (0 = 0-3 jam, 1 = 4-6 jam, 2 = 6+ jam)
-CALC | Frekuensi konsumsi alkohol
-MTRANS | Jenis transportasi yang digunakan
-NObeyesdad | Tingkat berat badan responden
+StudentID | Pengidentifikasi unik yang diberikan kepada setiap siswa (1001 hingga 3392)
+Age | Usia siswa berkisar antara 15 hingga 18 tahun
+Gender | Jenis kelamin siswa, di mana 0 mewakili Laki-laki dan 1 mewakili Perempuan
+Ethnicity | Etnis siswa, dikodekan sebagai berikut: 0(Kaukasia), 1(Afrika Amerika), 2(Asia), 3(Lainnya)
+ParentalEducation | Tingkat pendidikan orang tua, dikodekan sebagai berikut: 0(Tidak Ada), 1(Sekolah Menengah Atas), 2(Beberapa Perguruan Tinggi), 3(Sarjana), 4(Lebih Tinggi)
+StudyTimeWeekly | Waktu belajar mingguan dalam jam, berkisar antara 0 hingga 20
+Absences | Jumlah ketidakhadiran selama tahun ajaran, berkisar antara 0 hingga 30
+Tutoring | Status bimbingan belajar, di mana 0 menunjukkan Tidak dan 1 menunjukkan Ya
+ParentalSupport | Tingkat dukungan orang tua, dikodekan sebagai berikut:0: Tidak Ada
+1: Rendah
+2: Sedang
+3: Tinggi
+4: Sangat Tinggi
+Extracurricular | Apakah responden merupakan perokok 
+Sports | Frekuensi Konsumsi air dalam sehari (liter)
+Music	| Apakah responden memantau asupan kalori
+Volunteering	| Frekuensi aktivitas fisik dalam seminggu (0 = Tidak pernah, 1 = 1-2 hari, 2 = 3-4 hari, 3 = 5-6 hari)
+GPA	| Waktu pemakaian gadget dalam sehari (0 = 0-3 jam, 1 = 4-6 jam, 2 = 6+ jam)
+GradeClass | Frekuensi konsumsi alkohol
 
 Pada variabel `FAF`, `TUE`, dan `NObeyesdad`, setiap nilai memiliki arti masing-masing. Berikut penjelasannya.
 

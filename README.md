@@ -54,48 +54,13 @@ ParentalEducation | Tingkat pendidikan orang tua, dikodekan sebagai berikut: 0(T
 StudyTimeWeekly | Waktu belajar mingguan dalam jam, berkisar antara 0 hingga 20
 Absences | Jumlah ketidakhadiran selama tahun ajaran, berkisar antara 0 hingga 30
 Tutoring | Status bimbingan belajar, di mana 0 menunjukkan Tidak dan 1 menunjukkan Ya
-ParentalSupport | Tingkat dukungan orang tua, dikodekan sebagai berikut:0: Tidak Ada
-1: Rendah
-2: Sedang
-3: Tinggi
-4: Sangat Tinggi
-Extracurricular | Apakah responden merupakan perokok 
-Sports | Frekuensi Konsumsi air dalam sehari (liter)
-Music	| Apakah responden memantau asupan kalori
-Volunteering	| Frekuensi aktivitas fisik dalam seminggu (0 = Tidak pernah, 1 = 1-2 hari, 2 = 3-4 hari, 3 = 5-6 hari)
-GPA	| Waktu pemakaian gadget dalam sehari (0 = 0-3 jam, 1 = 4-6 jam, 2 = 6+ jam)
-GradeClass | Frekuensi konsumsi alkohol
-
-Pada variabel `FAF`, `TUE`, dan `NObeyesdad`, setiap nilai memiliki arti masing-masing. Berikut penjelasannya.
-
-1. Variabel `FAF`
-
-Nilai | Keterangan
-----------|----------
-0 | Tidak pernah
-1 | 1-2 hari
-2 | 3-4 hari
-3 | 5+ hari
-
-2. Variabel `TUE`
-
-Nilai | Keterangan
-----------|----------
-0 | 0-3 jam
-1 | 4-6 jam
-2 | 6+ jam
-
-3. Variabel `NObeyesdad`
-
-Nilai | Arti | BMI
---------|--------|--------
-Insufficient_Weight | Kekurangan Berat Badan | < 18.5
-Normal_Weight | Berat Badan Normal | 18.5 - 24.9 
-Overweight_Level_I | Overweight Tingkat 1 | 25.0 - 27.4
-Overweight_Level_II | Overweight Tingkat 2 | 27.5 - 29.9
-Obesity_Type_I | Obesitas Tingkat 1 | 30.0 - 34.9
-Obesity_Type_II | Obesitas Tingkat 2 | 35.0 - 39.9
-Obesity_Type_III | Obesitas Tingkat 3 | > 40
+ParentalSupport | Tingkat dukungan orang tua, dikodekan sebagai berikut: 0(Tidak Ada), 1(Rendah), 2(Sedang), 3(Tinggi), 4(Sangat Tinggi)
+Extracurricular | Partisipasi dalam kegiatan ekstrakurikuler, di mana 0 menunjukkan Tidak dan 1 menunjukkan Ya
+Sports | Partisipasi dalam olahraga, di mana 0 menunjukkan Tidak dan 1 menunjukkan Ya
+Music	| Partisipasi dalam kegiatan musik, di mana 0 menunjukkan Tidak dan 1 menunjukkan Ya
+Volunteering	| Partisipasi dalam kesukarelaan, di mana 0 menunjukkan Tidak dan 1 menunjukkan Ya
+GPA	| Nilai Rata-rata Poin pada skala 2,0 hingga 4,0
+GradeClass | Klasifikasi nilai siswa berdasarkan IPK (0: 'A' (IPK >= 3,5)), (1: 'B' (3,0 <= IPK < 3,5)), (2: 'C' (2,5 <= IPK < 3,0)), (3: 'D' (2,0 <= IPK < 2,5)), (4: 'F' (IPK < 2,0))
 
 ### Data Cleaning
 Setelah diperiksa apakah terdapat kolom yang bernilai null, hasilnya adalah tidak ada. Sementara itu, setelah diperiksa apakah terdapat data duplikat, ditemukan 24 duplikat, sehingga data duplikat ini dihapus. Oleh karena itu, setelah dilakukan pembersihan data, diperoleh deskripsi statistik data numerik sebagai berikut. 

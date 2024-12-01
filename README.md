@@ -19,8 +19,7 @@ Berdasarkan latar belakang tersebut, maka rincian permasalahan yang dapat dibaha
 5. Bagaimana partisipasi siswa dalam kegiatan ekstrakurikuler (*Extracurricular, Sports, Music, Volunteering*) memengaruhi GPA mereka?
 6. Apakah dukungan orang tua (*Parental Support*) berhubungan langsung dengan GPA siswa?
 7. Faktor mana yang paling berpengaruh terhadap prediksi GPA siswa ketika mempertimbangkan semua atribut (*Age, Gender, Parental Education, Study Time Weekly, Absences, Tutoring, Parental Support, Extracurricular, Sports, Music, Volunteering*)
-8. Apakah siswa yang mengikuti tutoring juga menghabiskan lebih banyak waktu belajar mingguan berpengaruh terhadap GPA mereka?
-9. Apa model terbaik yang dapat digunakan untuk memprediksi kinerja siswa?
+8. Apa model terbaik yang dapat digunakan untuk memprediksi kinerja siswa?
 
 ### Goals
 Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek ini.
@@ -31,8 +30,7 @@ Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek in
 5. Menilai dampak kegiatan non-akademik terhadap kinerja akademik.
 6. Mengukur pentingnya keterlibatan orang tua dalam keberhasilan belajar siswa.
 7. Membangun model prediksi untuk memantau dan meningkatkan kinerja siswa
-8. Memahami sinergi antara bimbingan belajar dan durasi belajar mandiri.
-9. Menemukan model terbaik berdasarkan akurasi tertinggi untuk memprediksi kinerja siswa.
+8. Menemukan model terbaik berdasarkan akurasi tertinggi untuk memprediksi kinerja siswa.
 
 ### Solution Statement
 1. Melakukan proses *Exploratory Data Analysis* (EDA) untuk menampilkan durasi belajar yang lebih efektif, mendeteksi pola absensi yang berdampak pada penurunan performa akademik, menilai efektivitas bimbingan belajar untuk meningkatkan performa siswa, mengidentifikasi apakah ada kesenjangan gender dalam pencapaian akademik, menilai dampak kegiatan non-akademik terhadap kinerja akademik, mengukur pentingnya keterlibatan orang tua dalam keberhasilan belajar siswa, membangun model prediksi untuk memantau dan meningkatkan kinerja siswa, memahami sinergi antara bimbingan belajar dan durasi belajar mandiri, menemukan model terbaik berdasarkan akurasi tertinggi untuk memprediksi kinerja siswa.

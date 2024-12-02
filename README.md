@@ -99,117 +99,93 @@ Kedua, kita akan memvisualisasikan kolom-kolom kategorikal untuk melihat jumlah-
 <img src = "images/nilai-nilai-data-kategorikal-2.png"/> <br>
 
 Interpretasi:
-Berdasarkan grafik data kategorikal yang ditampilkan, dapat dilihat bahwa:
-Grafik jenis kelamin, menunjukan jumlah merata antara laki-laki dan perempuan.
-Grafik Etnis, menunjukan mayoritas siswa berasal dari etnis kaukasia.
-Grafisk pendidikan orangtua, menunjukan mayoritas pendidikan orang tua yakni pensisikan tinggi dan sarjana
-Grafik bimbingan belajar, menunjukan mayoritas siswa tidak mengikuti bimbingan belajar.
-Grafik dukungan orang tua, menunjukan mayoritas dukungan orang tua berada di level sdang dan tinggi.
-Grafik Ekstrakulikuler(EKtrakulikuler, Olahraga, Musik dan Sukrelawan), menujukan rendahnya minat siswa pada kegiatan diluar sekolah.
+1. Grafik jenis kelamin, menunjukan jumlah merata antara laki-laki dan perempuan.
+2. Grafik Etnis, menunjukan mayoritas siswa berasal dari etnis kaukasia.
+3. Grafisk pendidikan orangtua, menunjukan mayoritas pendidikan orang tua yakni pensisikan tinggi dan sarjana
+4. Grafik bimbingan belajar, menunjukan mayoritas siswa tidak mengikuti bimbingan belajar.
+5. Grafik dukungan orang tua, menunjukan mayoritas dukungan orang tua berada di level sdang dan tinggi.
+6. Grafik Ekstrakulikuler(EKtrakulikuler, Olahraga, Musik dan Sukrelawan), menujukan rendahnya minat siswa pada kegiatan diluar sekolah.
 
 Ketiga, kita akan melihat lebih detail mengenai jumlah dari masing-masing tingkat kelas terbaik yang menjadi target kita untuk mengetahui jumlah secara umum.
 
 <img src = "images/daftar-nilai-prestasi-kelas.png"/> <br>
 
-Dari gambar di atas, kelas terbaik(GradeClass) yang ditampilkan menununjukan mayoritas prestasi siswa berada di kategori Grade F (Prestasi terendah)
+Interpretasi: 
+Kelas terbaik(GradeClass) yang ditampilkan menununjukan mayoritas prestasi siswa berada di kategori Grade F (Prestasi terendah)
 
 Keempat, kita buat pie chart untuk melihat persebaran data dari masing-masing Prestasi Siswa Pada Kategori GradeClass:
 
 <img src = "images/pesebaran-gradeclass.png"/> <br>
-Dari grafik diatas menunjukan ditas 50% siswa berada pada gradeclass F (Prestasi terendah)
+Interpretasi:
+Siswa berada pada gradeclass F (Prestasi terendah) memiliki presntasi terbayak yakni 50% keatas.
 
 Langkah terakhir, kita akan membentuk histogram dari variabel-variabel numerikal untuk melihat persebaran data:
 
 <img src = "images/pesebaran-data-numerikal.png"/> <br>
-Berdasarkan gambar diatas, dapat dilihat bahwa plot histrogram usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi normal.
+Interpretasi: 
+Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi normal.
 
 ### Multivariate Analysis
 
-#### 1. Membandingkan Tingkat Berat Badan Pada Setiap Jenis Kelamin
+#### 1. Membandingkan waktu belajar mingguan dengan prestasi siswa
 
-<img src = "gambar/Barplot_1.png"/> <br>
-
-Interpretasi:
-1. Laki-laki lebih banyak memiliki berat badan berlebih tingkat 2 dan obesitas tingkat 1 dibandingkan perempuan.
-2. Hampir seluruh obesitas tingkat 2 dialami oleh laki-laki, sedangkan hampir seluruh obesitas tingkat 3 dialami oleh perempuan.
-
-#### 2. Membandingkan Tingkat Berat Badan dengan Usia
-
-<img src = "gambar/Strip_Plot_1.png"/> <br>
+<img src = "images/pengaruh-waktu-belajar-prestasi-siswa"/> <br>
 
 Interpretasi:
-1. Seluruh penyandang obesitas tingkat 3 berusia di bawah 30 tahun.
-2. Seluruh penyandang obesitas tingkat 2 berusia di sekitar rentang 20-40 tahun.
+Siswa yang waktu belajaranya banyak mempengaruhi naiknya prestasi belajar(GPA).
 
-#### 3. Membandingkan Tingkat Berat Badan dengan Jumlah Makan Berat
+#### 2. Membandingkan Ketidakhadiran(Absen) dengan Nilai Prestasi Siswa
 
-<img src = "gambar/Strip_Plot_2.png"/> <br>
-
-Interpretasi:
-1. Seluruh penyandang obesitas tingkat 3 makan berat sebanyak 3 kali dalam sehari.
-2. Penyandang obesitas tingkat 1 makan berat sebanyak rentang 1-3 kali dalam sehari.
-3. Seluruh responden selain poin nomor 1 dan 2 memiliki jumlah makan berat yang bervariasi, dari rentang 1-4 kali makan dalam sehari.
-
-#### 4. Membandingkan Tingkat Berat Badan dengan Frekuensi Aktivitas Fisik
-
-<img src = "gambar/Strip_Plot_3.png"/> <br>
+<img src = "images/pengaruh-absen-prestasi-siswa.png"/> <br>
 
 Interpretasi:
-Seluruh penyandang obesitas tingkat 2 dan tingkat 3 melakukan aktivitas fisik kurang dari 4 hari dalam seminggu.
+Absen(ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA).
 
-#### 5. Membandingkan Tingkat Berat Badan dengan Frekuensi Konsumsi air
+#### 3. Membandingkan Bimbingan Belajar dengan Nilai Prestasi Siswa
 
-<img src = "gambar/Strip_Plot_4.png" style = "zoom : 50%;" /> <br>
-
-Interpretasi:
-Seluruh responden di setiap tingkat berat badan memiliki frekuensi konsumsi air yang beragam, dengan rentang 1-3 liter dalam sehari.
-
-#### 6. Membandingkan Tingkat Berat Badan dengan Konsumsi Makanan Di Antara Makan Berat
-
-<img src = "gambar/Distribution_Plot_1.png"/> <br>
+<img src = "images/bimbel-prestasi-siswa.png"/> <br>
 
 Interpretasi:
-1. Mayoritas responden baik laki-laki maupun perempuan terkadang makan di antara makanan berat.
-2. Responden yang sering atau selalu makan di antara makanan berat memiliki berat badan kurang dari 120 kilogram.
-3. Lebih banyak laki-laki yang sering makan di antara makanan berat dan memiliki berat badan di atas 60 kilogram dibandingkan perempuan.
+Banyak siswa yang tidak mengikuti bimbingan belajar yang mendapat prestasi rendah (Grade F)
 
-#### 7. Membandingkan Tingkat Berat Badan dengan Jenis Transportasi yang Digunakan
+#### 4. Membandingkan Jenis Kelamin Pada Nilai Prestasi Siswa
 
-<img src = "gambar/Barplot_2.png"/> <br>
+<img src = "images/jk-prestasi-siswa.png"/> <br>
 
 Interpretasi:
-1. Mayoritas responden menggunakan transportasi umum sebagai sarana transportasi mereka.
-2. Seluruh penyandang obesitas tingkat 3 menggunakan transportasi umum sebagai sarana transportasi mereka.
+Jenis kelamin pria lebih dominan memiliki prestasi lebih tinggi dibandingkan dengan wanita
 
-#### 8. Membandingkan Tingkat Berat Badan dengan Frekuensi Konsumsi Alkohol
+#### 5. Membandingkan Kegiatan Ekskulikuler dengan Nilai Prestasi Siswa
 
-<img src = "gambar/Barplot_3.png"/> <br>
+<img src = "images/ekstra-prestasi-siswa.png"/> <br>
 
 Interpretasi:
-1. Mayoritas responden terkadang mengonsumsi alkohol.
-2. Seluruh penyandang obesitas tingkat 3 terkadang mengonsumsi alkohol.
+Lebih banyak siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik mempengaruhi turunya nilai pretasi(GPA) mereka
 
-#### 9. Melihat Korelasi Variabel dengan Menggunakan Heatmap
+#### 6. Membandingkan Dukungan Orang Tua dengan Nilai Prestasi Siswa
 
-<img src = "gambar/Heatmap_1.png"/> <br>
+<img src = "images/dukungan-ortu-prestasi-siswa.png"/> <br>
+
+Interpretasi:
+Mayoritas dukungan orang tua sangat mempengaruhin nilai prestasi siswa (GPA). Semakin tinggi dukungan orang tua, maka semakin meningkat nilai prestasi dari anaknya.
+
+#### 7. Melihat Korelasi Variabel dengan Menggunakan Heatmap
+
+<img src = "images/korelasi-headmap.png"/> <br>
 
 Interpretasi:
 
-Berat badan responden memiliki
-1. Korelasi positif yang cukup kuat dengan tinggi badan.
-2. Korelasi positif yang lemah terhadap usia, frekuensi konsumsi sayur-sayuran dalam sehari, dan frekuensi konsumsi air dalam sehari.
-3. Korelasi positif yang sangat lemah terhadap frekuensi konsumsi makanan berat.
-4. Korelasi negatif yang sangat lemah terhadap frekuensi aktivitas fisik dalam seminggu dan waktu pemakaian gadget dalam sehari.
+Nilai Prestasi Siswa memiliki
+1. Korelasi negatif yang cukup kuat dengan ketidakhadiran(Absences).
+2. Korelasi positif yang cukup lemah dengan waktu belajar setiap minggu(StudyTimeWeekly).
 
-#### 10. Melihat Plot Scatter yang Memiliki Nilai Korelasi $\geq$ 0.2 dari Berat Badan
+#### 8. Melihat Plot Scatter yang Memiliki Nilai Korelasi Positif dan Negatif
 
-<img src = "gambar/Scatter_Plot_1.png"/> <br>
+<img src = "images/plot-scatter-absen-study-timeweekly-gpa.png"/> <br>
 
 Interpretasi:
 
-Seperti pada poin nomor 9, berat badan responden memiliki
-* Korelasi positif yang cukup kuat dengan tinggi badan karena garis trend mengarah ke arah kanan atas.
-* Korelasi positif yang lemah terhadap usia, frekuensi konsumsi sayur-sayuran dalam sehari, dan frekuensi konsumsi air dalam sehari karena garis trend mengarah sedikit ke arah kanan atas.
+Nilai prestasi siswa (GPA) memiliki  korelasi negatif yang kuat pada ketidakhadiran (garis regresi menurun ke kanan bawah) dan korelatif positif cukup lemah pada waktu belajar setiap minggu (garis regresi naik ke kanan atas)
 
 ## Data Preparation
 Pertama, akan diubah nilai-nilai kategorikal pada data menggunakan encoder sehingga menjadi nilai-nilai numerik agar dapat dilatih dengan *machine learning*.

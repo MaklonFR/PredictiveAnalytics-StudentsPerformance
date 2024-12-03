@@ -129,7 +129,7 @@ Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi nor
 
 #### 1. Membandingkan waktu belajar mingguan dengan prestasi siswa
 
-<img src = "images/pengaruh-waktu-belajar-prestasi-siswa"/> <br>
+<img src = "images/pengaruh-waktu-belajar-prestasi-siswa.png"/> <br>
 
 Interpretasi:
 Siswa yang waktu belajaranya banyak mempengaruhi naiknya prestasi belajar(GPA).

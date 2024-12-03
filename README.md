@@ -306,7 +306,7 @@ Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 24 
 #### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
 
-<img src = "gambar/barplot.png"/> <br>
+<img src = "images/barplot.png"/> <br>
 
 Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *XGBoots* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada Grade A. 
 

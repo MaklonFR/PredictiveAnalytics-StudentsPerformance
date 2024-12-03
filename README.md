@@ -65,7 +65,7 @@ Setelah diperiksa apakah terdapat kolom yang bernilai null, hasilnya adalah tida
 
 Selanjutnya kita akan melihat pesebaran data pada kolom nuerikal pada gambar dibawah ini:
 
-<img src = "images/data-numerikal.png"/> <br>
+![data-numerikal](https://github.com/user-attachments/assets/1815862b-2aa3-47c9-8213-0922092d39ae)<br>
 Interprestasi:
 1. Pada kolom Age, dapat dilihat rata-rata siswa berumur 15-17 tahun. Dapat disimpulkan tidak ada Outlier yang tersebar.
 2. Pada kolom StudyTimeWeekly, dapat dilihat bahwa rata-rata siswa memiliki waktu belajar 5-14 jam per minggu.

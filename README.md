@@ -80,7 +80,7 @@ Semua kategorikal: ["Gender", "Ethnicity", "ParentalEducation", "Tutoring", "Par
 
 Pertama, kita akan melihat nilai berbeda pada kolom kategorikal pada gambar tabel dibawah ini:
 
-<img src = "images/nilai-beda-data-katergorikal.png"/> <br>
+![data-numerikal](https://github.com/user-attachments/assets/9ed7d26b-0124-4f02-ade6-ba66fc0c1f1a) <br>
 Dapat dilihat pada tabel nilai berbeda pada:
 1. Kolom gender = 2;
 2. Kolom Etnicity = 4;
@@ -95,8 +95,9 @@ Dapat dilihat pada tabel nilai berbeda pada:
     
 Kedua, kita akan memvisualisasikan kolom-kolom kategorikal untuk melihat jumlah-jumlah nilai kategorikal menggunakan bar plot.
 
-<img src = "images/nilai-nilai-data-kategorikal-1.png"/> <br>
-<img src = "images/nilai-nilai-data-kategorikal-2.png"/> <br>
+![nilai-nilai-data-kategorikal-1](https://github.com/user-attachments/assets/9f4504fb-45a8-4ce0-a932-37284fee5c81)<br>
+![nilai-nilai-data-kategorikal-2](https://github.com/user-attachments/assets/da102c2b-ebde-4651-9e19-390056a4e2ea)
+ <br>
 
 Interpretasi:
 1. Grafik jenis kelamin, menunjukan jumlah merata antara laki-laki dan perempuan.

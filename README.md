@@ -271,60 +271,55 @@ Rumusnya: <br>
  
 ### Penerapan Matriks Confusion, Akurasi, dan Skor f1
 
-#### 1. Model XGBoost
-
-Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model XGBoost
-
-<img src = "gambar/Confusion_Matrix_1.png"/> <br>
-
-Dari gambar di atas, terdapat 11 data yang diprediksi salah pada obesitas tingkat 2 dan 7 data yang diprediksi salah pada obesitas tingkat 3. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.933014 atau ≈93.30%.
-
-#### 2. Model SVM
-
-Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model SVM
-
-<img src = "gambar/Confusion_Matrix_2.png"/> <br>
-
-Dari gambar di atas, terdapat 19 data yang diprediksi salah pada obesitas tingkat 2 dan 14 data yang diprediksi salah pada obesitas tingkat 3. Diperoleh skor F1 nya adalah 0.85 dengan akurasi tepatnya adalah 0.849282 atau ≈84.93%.
-
-#### 3. Model KNN
-
-Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
-
-<img src = "gambar/Confusion_Matrix_3.png"/> <br>
-
-Dari gambar di atas, terdapat 12 data yang diprediksi salah pada obesitas tingkat 2 dan 14 data yang diprediksi salah pada obesitas tingkat 3. Diperoleh skor F1 nya adalah 0.85 dengan akurasi tepatnya adalah 0.846889 atau ≈84.69%.
-
-#### 4. Model *Random Forest*
+#### 1. Model Development dengan Random Forest
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Random Forest*
 
-<img src = "gambar/Confusion_Matrix_4.png"/> <br>
+<img src = "images/random_forest.png"/> <br>
 
-Dari gambar di atas, terdapat 11 data yang diprediksi salah pada obesitas tingkat 2 dan 6 data yang diprediksi salah pada obesitas tingkat 3. Diperoleh skor F1 nya adalah 0.94 dengan akurasi tepatnya adalah 0.942584 atau ≈94.26%.
+Dari gambar di atas, terdapat 11 data yang diprediksi salah pada Grade A dan 14 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.92 dengan akurasi tepatnya adalah 0.9207 atau ≈92.07%.
+
+#### 2. Model Development dengan XGBoots
+
+Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model SVM
+
+<img src = "images/XGBoots.png"/> <br>
+
+Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9311 atau ≈93.11%.
+
+#### 3. Model Model Development dengan SVM
+
+Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
+
+<img src = "images/svm.png"/> <br>
+
+Dari gambar di atas, terdapat 18 data yang diprediksi salah pada Grade A dan 29 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
+
+#### 4. Model Model Development dengan Naive Bayes
+
+Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
+
+<img src = "images/naive.png"/> <br>
+
+Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 24 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
 
 #### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
 
-<img src = "gambar/Barplot_4.png"/> <br>
+<img src = "gambar/barplot.png"/> <br>
 
-Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *Random Forest* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada obesitas. 
+Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *XGBoots* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada Grade A. 
 
 ## Kesimpulan
-1. Berdasarkan data yang diperoleh, sekitar 73.7% dari seluruh responden mengalami *overweight* atau obesitas, dengan 46.5% di antaranya mengalami obesitas.
-2. Jenis kelamin yang berbeda memiliki tingkat obesitas yang berbeda. Dari data yang diperoleh, mayoritas laki-laki mengalami *overweight* tingkat 2, obesitas tingkat 1, dan obesitas tingkat 2. Sedangkan mayoritas perempuan mengalami obesitas tingkat 3.
-3. Faktor-faktor yang memengaruhi berat badan seseorang adalah tinggi badan, usia, frekuensi konsumsi sayur-sayuran dalam sehari, dan frekuensi konsumsi air dalam sehari.
-4. Seluruh penyandang obesitas tingkat 3 memiliki kesamaan dalam beberapa faktor, yaitu
-   * Menggunakan transportasi umum sebagai sarana transportasi
-   * Terkadang mengonsumsi alkohol
-   * Melakukan aktivitas fisik kurang dari 4 hari dalam seminggu.
-   * Makan berat sebanyak 3 kali dalam sehari
-   * Berusia di bawah 30 tahun. 
-5. Setelah menguji data menggunakan 4 model *machine learning*, yaitu ***Extreme Gradient Boosting* (XGBoost)**, ***Support Vector Machine* (SVM)**, ***K-Nearest Neighbors* (KNN)**, dan ***Random Forest*** untuk mendeteksi obesitas, diperoleh model *Random Forest* merupakan model terbaik dibandingkan model lainnya berdasarkan skor akurasi, skor F1, dan jumlah kesalahan klasifikasi yang paling sedikit.
+1. Berdasarkan data yang diperoleh, waktu belajar yang optimal berada ditas 20 jam. 
+2. Berdasarkan data yang diperoleh, absen (ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA)
+3. rata-rata siswa yang tidak mengikuti bimbingan belajar lebih banyak berada pada prestasi kelas bawah (Grade F)
+4. Jenis kelamin yang berbeda memiliki prestasi yang tidak jauh berbeda. Dari data yang diperoleh, mayoritas perempuan mengalami penurunan prestasi pada Grade F, Grade D, Grade B dan Grade A dibandingkan dengan laki-laki.
+5. Mayoritas siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik mempengaruhi turunya nilai pretasinya(GPA)
+6. Dukungan orang tua sangat mempengaruhin nilai prestasi siswa (GPA). Semakin tinggi dukungan orang tua, maka semakin meningkat nilai prestasi dari anaknya.
+7. Setelah menguji data menggunakan 4 model *machine learning*, yaitu ***Extreme Gradient Boosting* (XGBoost)**, ***Support Vector Machine* (SVM)**, ***Naive Bayes**, dan ***Random Forest*** untuk memprediksi performa siswa, diperoleh model *XGBoost* merupakan model terbaik dibandingkan model lainnya berdasarkan skor akurasi, skor F1, dan jumlah kesalahan klasifikasi yang paling sedikit.
 
 ## Referensi
-1. WHO. (2024). Diakses pada 6 Juli 2024 dari https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
-2. Kułak, Klaudia Brygida, Izabela Magdalena Sztybór & Katarzyna Kamińska. "OBESITY - AN EPIDEMIC OF THE 21ST CENTURY – LITERATURE REVIEW", 2024, p. 1-10. Journal of Education, Health and Sport, diakses pada 7 Juli 2024.
-3. Dicoding. Diakses pada 6 Juli 2024 dari https://www.dicoding.com/academies/319-machine-learning-terapan
-4. Tim Promkes RSST - RSUP dr. Soeradji Tirtonegoro Klaten. (2022). Diakses pada 6 Juli 2024 dari https://yankes.kemkes.go.id/view_artikel/429/obesitas
-5. Tandiono, Steven Marcelino & Samuel Ady SanjayaWise. "Machine Learning Approach of ObesityLevel Classification: A Systematic Literature Reviewof Methods and Factors", vol. 8, no. 1, 2023, p. 196-208. G-Tech : Jurnal Teknologi Terapan, diakses pada 7 Juli 2024.
+1. Abdul Rahman. "Klasifikasi Performa Akademik Siswa Menggunakan Metode Decision Tree dan Naive Bayes", Vol. 13 No.1 (2023) 22-31, ISSN 2503-3247. SINTA Peringkat 4, diakses pada 28 November 2024.
+2. Dicoding. Diakses pada 6 Juli 2024 dari https://www.dicoding.com/academies/319-machine-learning-terapan
+3. Arif Fahrudin1, Harco Leslie Hendric Spits Warnars. "Prediksi Performa Siswa Dengan Metode SAW", vol. 9, no. 1, 2020, P-ISSN 2089-1245, E-ISSN 2655-4925. KILAT, diakses pada 29 November 2024.

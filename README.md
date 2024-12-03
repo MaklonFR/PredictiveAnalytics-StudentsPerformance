@@ -14,7 +14,7 @@ Predictive analytics memungkinkan institusi pendidikan untuk mengidentifikasi po
 Berdasarkan latar belakang tersebut, maka rincian permasalahan yang dapat dibahas pada proyek ini yakni:
 1. Berapa banyak waktu belajar mingguan (*Study Time Weekly*) yang optimal untuk meningkatkan GPA siswa?
 2. Apakah absensi siswa (*Absences*) berkorelasi negatif dengan GPA mereka?
-3. Bagaimana tutoring (bimbingan belajar) memengaruhi GPA siswa?
+3. Apakah tutoring (bimbingan belajar) memengaruhi GPA siswa?
 4. Apakah terdapat perbedaan performa akademik antara siswa laki-laki dan perempuan (*Gender*) dalam hal GPA?
 5. Bagaimana partisipasi siswa dalam kegiatan ekstrakurikuler (*Extracurricular, Sports, Music, Volunteering*) memengaruhi GPA mereka?
 6. Apakah dukungan orang tua (*Parental Support*) berhubungan langsung dengan GPA siswa?
@@ -25,7 +25,7 @@ Berdasarkan latar belakang tersebut, maka rincian permasalahan yang dapat dibaha
 Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek ini.
 1. Menampilkan durasi belajar yang lebih efektif.
 2. Mendeteksi pola absensi yang berdampak pada penurunan performa akademik.
-3. Menilai efektivitas bimbingan belajar untuk meningkatkan performa siswa.
+3. Menilai pengaruh bimbingan belajar untuk meningkatkan performa siswa.
 4. Mengidentifikasi apakah ada kesenjangan gender dalam pencapaian akademik.
 5. Menilai dampak kegiatan non-akademik terhadap kinerja akademik.
 6. Mengukur pentingnya keterlibatan orang tua dalam keberhasilan belajar siswa.

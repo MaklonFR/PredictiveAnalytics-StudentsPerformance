@@ -109,20 +109,20 @@ Interpretasi:
 
 Ketiga, kita akan melihat lebih detail mengenai jumlah dari masing-masing tingkat kelas terbaik yang menjadi target kita untuk mengetahui jumlah secara umum.
 
-<img src = "images/daftar-nilai-prestasi-kelas.png"/> <br>
+![daftar-nilai-prestasi-kelas](https://github.com/user-attachments/assets/4c2f99ff-606c-4b5a-bbf1-17d34ed575dd) <br>
 
 Interpretasi: 
 Kelas terbaik(GradeClass) yang ditampilkan menununjukan mayoritas prestasi siswa berada di kategori Grade F (Prestasi terendah)
 
 Keempat, kita buat pie chart untuk melihat persebaran data dari masing-masing Prestasi Siswa Pada Kategori GradeClass:
 
-<img src = "images/pesebaran-gradeclass.png"/> <br>
+![pesebaran-gradeclass](https://github.com/user-attachments/assets/e66a9c49-e205-4c02-8f44-896b102faf37) <br>
 Interpretasi:
 Siswa berada pada gradeclass F (Prestasi terendah) memiliki presntasi terbayak yakni 50% keatas.
 
 Langkah terakhir, kita akan membentuk histogram dari variabel-variabel numerikal untuk melihat persebaran data:
 
-<img src = "images/pesebaran-data-numerikal.png"/> <br>
+![pesebaran-data-numerikal](https://github.com/user-attachments/assets/82bb4fd9-534d-4fe7-a351-7a8635583181) <br>
 Interpretasi: 
 Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi normal.
 
@@ -130,49 +130,50 @@ Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi nor
 
 #### 1. Membandingkan waktu belajar mingguan dengan prestasi siswa
 
-<img src = "images/pengaruh-waktu-belajar-prestasi-siswa.png"/> <br>
+![pengaruh-waktu-belajar-prestasi-siswa](https://github.com/user-attachments/assets/e3460ee9-6449-4533-9b03-3e227749d36c) <br>
 
 Interpretasi:
 Siswa yang waktu belajaranya banyak mempengaruhi naiknya prestasi belajar(GPA).
 
 #### 2. Membandingkan Ketidakhadiran(Absen) dengan Nilai Prestasi Siswa
 
-<img src = "images/pengaruh-absen-prestasi-siswa.png"/> <br>
+![pengaruh-absen-prestasi-siswa](https://github.com/user-attachments/assets/90ebe42b-3f7e-44f6-9f6d-ac41cf45c9ce)
+ <br>
 
 Interpretasi:
 Absen(ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA).
 
 #### 3. Membandingkan Bimbingan Belajar dengan Nilai Prestasi Siswa
 
-<img src = "images/bimbel-prestasi-siswa.png"/> <br>
+![bimbel-prestasi-siswa](https://github.com/user-attachments/assets/95d5567c-cef2-43e7-8851-658906f0136c) <br>
 
 Interpretasi:
 Banyak siswa yang tidak mengikuti bimbingan belajar yang mendapat prestasi rendah (Grade F)
 
 #### 4. Membandingkan Jenis Kelamin Pada Nilai Prestasi Siswa
 
-<img src = "images/jk-prestasi-siswa.png"/> <br>
+![jk-prestasi-siswa](https://github.com/user-attachments/assets/71e91698-39b4-43c7-8eec-de9e0a342a6f)<br>
 
 Interpretasi:
 Jenis kelamin pria lebih dominan memiliki prestasi lebih tinggi dibandingkan dengan wanita
 
 #### 5. Membandingkan Kegiatan Ekskulikuler dengan Nilai Prestasi Siswa
 
-<img src = "images/ekstra-prestasi-siswa.png"/> <br>
+![ekstra-prestasi-siswa](https://github.com/user-attachments/assets/684468d1-1942-4065-91cd-1c0b83923b95)<br>
 
 Interpretasi:
 Lebih banyak siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik mempengaruhi turunya nilai pretasi(GPA) mereka
 
 #### 6. Membandingkan Dukungan Orang Tua dengan Nilai Prestasi Siswa
 
-<img src = "images/dukungan-ortu-prestasi-siswa.png"/> <br>
+![dukungan-ortu-prestasi-siswa](https://github.com/user-attachments/assets/c711088d-2d29-4056-8d0c-37d5e9737d19) <br>
 
 Interpretasi:
 Mayoritas dukungan orang tua sangat mempengaruhin nilai prestasi siswa (GPA). Semakin tinggi dukungan orang tua, maka semakin meningkat nilai prestasi dari anaknya.
 
 #### 7. Melihat Korelasi Variabel dengan Menggunakan Heatmap
 
-<img src = "images/korelasi-headmap.png"/> <br>
+![korelasi-headmap](https://github.com/user-attachments/assets/be45973d-5230-4db7-8f2c-eab943ff641a) <br>
 
 Interpretasi:
 
@@ -182,7 +183,7 @@ Nilai Prestasi Siswa memiliki
 
 #### 8. Melihat Plot Scatter yang Memiliki Nilai Korelasi Positif dan Negatif
 
-<img src = "images/plot-scatter-absen-study-timeweekly-gpa.png"/> <br>
+![plot-scatter-absen-study-timeweekly-gpa](https://github.com/user-attachments/assets/a4e3ecb2-be4a-4408-9f91-982e8e4535bd)<br>
 
 Interpretasi:
 
@@ -194,7 +195,7 @@ Pada bagian ini, kita akan mengubah data mentah menjadi bentuk yang lebih mudah 
 ### Train-Test-Split
 Langkah awal kita mengubah data objek ke data numeri dengan memanggil fungsi konversi objek to numerik. Selanjutnya, karena target kita adalah variabel GradeClass untuk mengetahui akurasi prediksi dari kategori kelas prestasi terbaik, maka kita akan membuang kolom tersebut dari data dan assign kolom tersebut ke variabel baru.Data training digunakan untuk melatih model dengan data yang ada, sedangkan data testing digunakan untuk menguji model yang dibuat menggunakan data yang belum dilatih. Pembagian data ini dilakukan dengan perbandingan 80% : 20% untuk data training dan data testing menggunakan train_test_split dari library sklearn. Berikut adalah data traning yang akan diproses (ditampilkan contoh 5 baris teratas):
 
-<img src = "images/data-training-x.png"/> <br>
+![data-training-x](https://github.com/user-attachments/assets/175b7534-4936-4e7c-9a66-fe29d96c654d) <br>
 
 
 ## Modeling
@@ -204,7 +205,7 @@ Pada bagian ini, kita akan membangun 4 model machine learning untuk menguji seba
 ### 1. Model Development dengan Random Forest
 
 Algoritma pembelajaran ensemble yang sangat populer untuk tugas klasifikasi dan regresi. Ini bekerja dengan membuat sejumlah pohon keputusan selama pelatihan dan menggabungkan hasilnya (melalui voting untuk klasifikasi atau rata-rata untuk regresi) untuk meningkatkan akurasi dan mengurangi overfitting.. <br>
-
+    
 Pada pemodelan ini, *Random Forest* diimplementasikan menggunakan `RandomForestClassifier` dari library `sklearn.ensemble` dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. Parameter yang digunakan pada model ini adalah `n_estimators` yaitu jumlah tree yang akan dibuat, `criterion` yaitu fungsi untuk menentukan kualitas *splitting data*, `max_depth` yaitu kedalaman maksimum setiap tree, dan `random_state` yaitu mengontrol seed acak yang diberikan pada setiap iterasi. Pada proyek ini, parameter yang digunakan adalah `n_estimators = 200`, `criterion = "entropy"`, `max_depth = 10`, `random_state = 50`.
 
 ### 2. Model Development dengan Extreme Gradient Boosting (XGBoost)
@@ -225,7 +226,6 @@ Algoritman ini merupakan algoritma klasifikasi berbasis probabilistik yang didas
 
 Pada pemodelan ini, Naive Bayes diimplementasikan menggunakan `GaussianNB` dari library `sklearn.naive_bayes` karena datanya numerik dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. 
 
-
 ### 5. Pemilihan Model
 
 Setelah semua model dijalankan, penulis memilih algoritma *XGBoost* sebagai model terbaik yang akan digunakan sebagai solusi untuk memprediksi performa siswa karena model ini memiliki akurasi dan skor f1 tertinggi dibandingkan model lainnya, serta kesalahan klasifikasi pada matriks confusion yang lebih kecil dibanding model lainnya. Penjelasan lebih lengkap mengenai alasan ini ada di bagian selanjutnya, yaitu **evaluation**.
@@ -238,7 +238,7 @@ Pada proyek ini, penilaian model menggunakan confusion matrix, akurasi, dan f1 s
 
 1. Matriks Confusion merupakan matriks yang menunjukkan jumlah prediksi benar dan salah untuk setiap kelas. Contoh dari Matriks Confusion beserta labelnya dapat dilihat pada gambar di bawah ini.
 
-<img src = "images/confusion-matrix-1.png"/> <br>
+![confusion-matrix-1](https://github.com/user-attachments/assets/0b200762-9005-4765-9924-8076faf96046)<br>
 
 Formatnya:
 [[TP, FP],
@@ -252,20 +252,22 @@ Terdapat 4 label pada matriks confusion seperti yang terlihat di gambar, yaitu T
     
 2. Akurasi merupakan Persentase prediksi benar terhadap total prediksi.<br>
 Formatnya:<br>
-<img src = "images/format-akurasi.png"/>
+![format-akurasi](https://github.com/user-attachments/assets/689a2934-4adb-42e8-b46a-e59f2e6b0508)
 
 3. Skor F1 merupakan rata-rata harmonik dari precision dan recall.
 Formatnya:<br>
-<img src = "images/scor-f1.png"/>
+![scor-f1](https://github.com/user-attachments/assets/de176d91-a6b6-40a7-adc4-dd0d755eaa16)
 
 4. Precision merupakan proporsi prediksi positif yang benar-benar benar.<br>
 Rumusnya: <br>
-<img src = "images/pressecion.png"/> <br>
+![pressecion](https://github.com/user-attachments/assets/12b1ad68-e216-4bde-bce7-cfea6652e7e7)
+
 *Contoh*: Jika model memprediksi 10 data sebagai positif, tetapi hanya 7 yang benar-benar positif, maka precision adalah 7/10 = 0.7.
 
 5. Recall (Sensitivity) merupakan proporsi data positif yang terdeteksi dengan benar oleh model.<br>
 Rumusnya: <br>
-<img src = "images/recall.png"/> <br>
+![recall](https://github.com/user-attachments/assets/2f6d9e5d-bd59-4999-84ae-9e85146e385c)
+
 *Contoh*: Jika model memprediksi 10 data sebagai positif, tetapi hanya 7 yang benar-benar positif, maka precision adalah 7/10 = 0.7.
  
 ### Penerapan Matriks Confusion, Akurasi, dan Skor f1
@@ -274,7 +276,7 @@ Rumusnya: <br>
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Random Forest*
 
-<img src = "images/random_forest.png"/> <br>
+![random_forest](https://github.com/user-attachments/assets/fbae5a5f-a7e5-44a7-88bd-cbad0d671880)<br>
 
 Dari gambar di atas, terdapat 11 data yang diprediksi salah pada Grade A dan 14 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.92 dengan akurasi tepatnya adalah 0.9207 atau ≈92.07%.
 
@@ -282,7 +284,7 @@ Dari gambar di atas, terdapat 11 data yang diprediksi salah pada Grade A dan 14 
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model SVM
 
-<img src = "images/XGBoots.png"/> <br>
+![XGBoots](https://github.com/user-attachments/assets/485358ae-d942-49aa-a9ca-4cc9ed2ae651) <br>
 
 Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9311 atau ≈93.11%.
 
@@ -290,7 +292,7 @@ Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 d
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
 
-<img src = "images/svm.png"/> <br>
+![svm](https://github.com/user-attachments/assets/a1433936-b7da-43ef-8a83-27d36cf90f08)<br>
 
 Dari gambar di atas, terdapat 18 data yang diprediksi salah pada Grade A dan 29 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
 
@@ -298,14 +300,14 @@ Dari gambar di atas, terdapat 18 data yang diprediksi salah pada Grade A dan 29 
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
 
-<img src = "images/naive.png"/> <br>
+![naive](https://github.com/user-attachments/assets/45b8cd12-35e0-4195-99a3-ed7b55421982)<br>
 
 Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 24 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
 
 ### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
 
-<img src = "images/barplot.png"/> <br>
+![barplot](https://github.com/user-attachments/assets/350ef07f-2d5f-4f94-b331-ff3a1ee15fdb)<br>
 
 Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *XGBoots* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada Grade A. 
 

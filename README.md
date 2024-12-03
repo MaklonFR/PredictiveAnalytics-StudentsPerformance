@@ -80,7 +80,7 @@ Semua kategorikal: ["Gender", "Ethnicity", "ParentalEducation", "Tutoring", "Par
 
 Pertama, kita akan melihat nilai berbeda pada kolom kategorikal pada gambar tabel dibawah ini:
 
-![data-numerikal](https://github.com/user-attachments/assets/9ed7d26b-0124-4f02-ade6-ba66fc0c1f1a) <br>
+![nilai-beda-data-katergorikal](https://github.com/user-attachments/assets/4e18294d-df18-429b-b10c-80f388b30145)<br>
 Dapat dilihat pada tabel nilai berbeda pada:
 1. Kolom gender = 2;
 2. Kolom Etnicity = 4;

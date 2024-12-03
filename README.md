@@ -187,7 +187,7 @@ Interpretasi:
 
 Nilai prestasi siswa (GPA) memiliki  korelasi negatif yang kuat pada ketidakhadiran (garis regresi menurun ke kanan bawah) dan korelatif positif cukup lemah pada waktu belajar setiap minggu (garis regresi naik ke kanan atas)
 
-## Data Preprocessing
+## Data Data Preparation
 Pada bagian ini, kita akan mengubah data mentah menjadi bentuk yang lebih mudah dipahami yang iasa disebut data Preprocesing. 
 
 ### Train-Test-Split
@@ -195,10 +195,8 @@ Langkah awal kita mengubah data objek ke data numeri dengan memanggil fungsi kon
 
 <img src = "images/data-training-x.png"/> <br>
 
-### Standarisasi
-Pada langkah ini, kita akan melakukan normalisasi dengan fungsi StandardScaler untuk mengubah data numerik ke skala standar (mean=0, std=1).  Ini dilakukan untuk menyamakan skala variabel yang memiliki unit yang berbeda, sehingga memudahkan analisis dan perbandingan.
 
-## Model Development
+## Modeling
 
 Pada bagian ini, kita akan membangun 4 model machine learning untuk menguji sebarapa baik akurasi model, sehingga model tersebut yang disarankan untuk memprediksi prestasi siswa.
 
@@ -303,7 +301,7 @@ Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
 
 Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 24 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
 
-#### Hasil Evaluasi
+### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
 
 <img src = "images/barplot.png"/> <br>

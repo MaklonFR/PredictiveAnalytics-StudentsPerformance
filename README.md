@@ -95,10 +95,8 @@ Dapat dilihat pada tabel nilai berbeda pada:
     
 Kedua, kita akan memvisualisasikan kolom-kolom kategorikal untuk melihat jumlah-jumlah nilai kategorikal menggunakan bar plot.
 
-![nilai-nilai-data-kategorikal-1](https://github.com/user-attachments/assets/9f4504fb-45a8-4ce0-a932-37284fee5c81)<br>
-![nilai-nilai-data-kategorikal-2](https://github.com/user-attachments/assets/da102c2b-ebde-4651-9e19-390056a4e2ea)
- <br>
-
+<img src="https://github.com/user-attachments/assets/9f4504fb-45a8-4ce0-a932-37284fee5c81" align="center"><br>
+<img src="https://github.com/user-attachments/assets/da102c2b-ebde-4651-9e19-390056a4e2ea" align="center"><br>
 Interpretasi:
 1. Grafik jenis kelamin, menunjukan jumlah merata antara laki-laki dan perempuan.
 2. Grafik Etnis, menunjukan mayoritas siswa berasal dari etnis kaukasia.
@@ -109,20 +107,19 @@ Interpretasi:
 
 Ketiga, kita akan melihat lebih detail mengenai jumlah dari masing-masing tingkat kelas terbaik yang menjadi target kita untuk mengetahui jumlah secara umum.
 
-![daftar-nilai-prestasi-kelas](https://github.com/user-attachments/assets/4c2f99ff-606c-4b5a-bbf1-17d34ed575dd) <br>
-
+<img src="https://github.com/user-attachments/assets/4c2f99ff-606c-4b5a-bbf1-17d34ed575dd" align="center"><br>
 Interpretasi: 
 Kelas terbaik(GradeClass) yang ditampilkan menununjukan mayoritas prestasi siswa berada di kategori Grade F (Prestasi terendah)
 
 Keempat, kita buat pie chart untuk melihat persebaran data dari masing-masing Prestasi Siswa Pada Kategori GradeClass:
 
-![pesebaran-gradeclass](https://github.com/user-attachments/assets/e66a9c49-e205-4c02-8f44-896b102faf37) <br>
+<img src="https://github.com/user-attachments/assets/e66a9c49-e205-4c02-8f44-896b102faf37" align="center"><br>
 Interpretasi:
 Siswa berada pada gradeclass F (Prestasi terendah) memiliki presntasi terbayak yakni 50% keatas.
 
 Langkah terakhir, kita akan membentuk histogram dari variabel-variabel numerikal untuk melihat persebaran data:
 
-![pesebaran-data-numerikal](https://github.com/user-attachments/assets/82bb4fd9-534d-4fe7-a351-7a8635583181) <br>
+<img src="https://github.com/user-attachments/assets/82bb4fd9-534d-4fe7-a351-7a8635583181" align="center"><br>
 Interpretasi: 
 Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi normal.
 
@@ -130,51 +127,43 @@ Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi nor
 
 #### 1. Membandingkan waktu belajar mingguan dengan prestasi siswa
 
-![pengaruh-waktu-belajar-prestasi-siswa](https://github.com/user-attachments/assets/e3460ee9-6449-4533-9b03-3e227749d36c) <br>
-
+<img src="https://github.com/user-attachments/assets/e3460ee9-6449-4533-9b03-3e227749d36c" align="center"><br>
 Interpretasi:
 Siswa yang waktu belajaranya banyak mempengaruhi naiknya prestasi belajar(GPA).
 
 #### 2. Membandingkan Ketidakhadiran(Absen) dengan Nilai Prestasi Siswa
 
-![pengaruh-absen-prestasi-siswa](https://github.com/user-attachments/assets/90ebe42b-3f7e-44f6-9f6d-ac41cf45c9ce)
- <br>
-
+<img src="https://github.com/user-attachments/assets/90ebe42b-3f7e-44f6-9f6d-ac41cf45c9ce" align="center"><br>
 Interpretasi:
 Absen(ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA).
 
 #### 3. Membandingkan Bimbingan Belajar dengan Nilai Prestasi Siswa
 
-![bimbel-prestasi-siswa](https://github.com/user-attachments/assets/95d5567c-cef2-43e7-8851-658906f0136c) <br>
-
+<img src="https://github.com/user-attachments/assets/95d5567c-cef2-43e7-8851-658906f0136c" align="center"><br>
 Interpretasi:
 Banyak siswa yang tidak mengikuti bimbingan belajar yang mendapat prestasi rendah (Grade F)
 
 #### 4. Membandingkan Jenis Kelamin Pada Nilai Prestasi Siswa
 
-![jk-prestasi-siswa](https://github.com/user-attachments/assets/71e91698-39b4-43c7-8eec-de9e0a342a6f)<br>
-
+<img src="https://github.com/user-attachments/assets/71e91698-39b4-43c7-8eec-de9e0a342a6f" align="center"><br>
 Interpretasi:
 Jenis kelamin pria lebih dominan memiliki prestasi lebih tinggi dibandingkan dengan wanita
 
 #### 5. Membandingkan Kegiatan Ekskulikuler dengan Nilai Prestasi Siswa
 
-![ekstra-prestasi-siswa](https://github.com/user-attachments/assets/684468d1-1942-4065-91cd-1c0b83923b95)<br>
-
+<img src="https://github.com/user-attachments/assets/684468d1-1942-4065-91cd-1c0b83923b95" align="center"><br>
 Interpretasi:
 Lebih banyak siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik mempengaruhi turunya nilai pretasi(GPA) mereka
 
 #### 6. Membandingkan Dukungan Orang Tua dengan Nilai Prestasi Siswa
 
-![dukungan-ortu-prestasi-siswa](https://github.com/user-attachments/assets/c711088d-2d29-4056-8d0c-37d5e9737d19) <br>
-
+<img src="https://github.com/user-attachments/assets/c711088d-2d29-4056-8d0c-37d5e9737d19" align="center"><br>
 Interpretasi:
 Mayoritas dukungan orang tua sangat mempengaruhin nilai prestasi siswa (GPA). Semakin tinggi dukungan orang tua, maka semakin meningkat nilai prestasi dari anaknya.
 
 #### 7. Melihat Korelasi Variabel dengan Menggunakan Heatmap
 
-![korelasi-headmap](https://github.com/user-attachments/assets/be45973d-5230-4db7-8f2c-eab943ff641a) <br>
-
+<img src="https://github.com/user-attachments/assets/be45973d-5230-4db7-8f2c-eab943ff641a" align="center"><br>
 Interpretasi:
 
 Nilai Prestasi Siswa memiliki
@@ -183,8 +172,7 @@ Nilai Prestasi Siswa memiliki
 
 #### 8. Melihat Plot Scatter yang Memiliki Nilai Korelasi Positif dan Negatif
 
-![plot-scatter-absen-study-timeweekly-gpa](https://github.com/user-attachments/assets/a4e3ecb2-be4a-4408-9f91-982e8e4535bd)<br>
-
+<img src="https://github.com/user-attachments/assets/a4e3ecb2-be4a-4408-9f91-982e8e4535bd" align="center"><br>
 Interpretasi:
 
 Nilai prestasi siswa (GPA) memiliki  korelasi negatif yang kuat pada ketidakhadiran (garis regresi menurun ke kanan bawah) dan korelatif positif cukup lemah pada waktu belajar setiap minggu (garis regresi naik ke kanan atas)

@@ -6,7 +6,7 @@ Kinerja siswa dalam lingkungan pendidikan memainkan peran penting dalam menentuk
 
 Pendekatan tradisional dalam mengevaluasi kinerja siswa cenderung bersifat reaktif, hanya memberikan perhatian setelah masalah terjadi, seperti penurunan nilai atau tingkat kehadiran yang rendah. Oleh karena itu, diperlukan solusi yang bersifat prediktif untuk mengidentifikasi potensi risiko lebih awal, sehingga institusi pendidikan dapat mengambil langkah-langkah preventif untuk mendukung siswa secara proaktif.
 
-Predictive analytics memungkinkan institusi pendidikan untuk mengidentifikasi pola performa siswa berdasarkan data historis. Teknologi ini membantu dalam pengambilan keputusan yang proaktif untuk memberikan intervensi yang tepat waktu dan mendukung siswa dalam mencapai hasil terbaik. Pada kasus ini penulis menerapkan 4 model pembelajaran machine learning yakni Random Forest, K-Nearest-Neighboars (KNN), Support Vector Machine (SVM) dan Extreme Gradient Boosting (XGBoost). Pendekatan ini mengintegrasikan keunggulan dari berbagai model untuk membandingkan dan menemukan algoritma terbaik dalam memprediksi performa siswa berdasarkan dataset yang diperoleh dari kaggel dan dapat diakses pada tautan berikut (https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset). Dengan menggunakan model ini, diharapkan hasil prediksi yang akurat dapat membantu institusi pendidikan dalam merancang strategi pembelajaran yang lebih efektif dan personalisasi untuk siswa.
+Predictive analytics memungkinkan institusi pendidikan untuk mengidentifikasi pola performa siswa berdasarkan data historis. Teknologi ini membantu dalam pengambilan keputusan yang proaktif untuk memberikan intervensi yang tepat waktu dan mendukung siswa dalam mencapai hasil terbaik. Pada kasus ini penulis menerapkan 4 model pembelajaran machine learning yakni Random Forest, Naive Bayes, Support Vector Machine (SVM) dan Extreme Gradient Boosting (XGBoost). Pendekatan ini mengintegrasikan keunggulan dari berbagai model untuk membandingkan dan menemukan algoritma terbaik dalam memprediksi performa siswa berdasarkan dataset yang diperoleh dari kaggel dan dapat diakses pada tautan berikut (https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset). Dengan menggunakan model ini, diharapkan hasil prediksi yang akurat dapat membantu institusi pendidikan dalam merancang strategi pembelajaran yang lebih efektif dan personalisasi untuk siswa.
 
 ## Business Understanding
 
@@ -34,7 +34,7 @@ Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek in
 
 ### Solution Statement
 1. Melakukan proses *Exploratory Data Analysis* (EDA) untuk menampilkan durasi belajar yang lebih efektif, mendeteksi pola absensi yang berdampak pada penurunan performa akademik, menilai efektivitas bimbingan belajar untuk meningkatkan performa siswa, mengidentifikasi apakah ada kesenjangan gender dalam pencapaian akademik, menilai dampak kegiatan non-akademik terhadap kinerja akademik, mengukur pentingnya keterlibatan orang tua dalam keberhasilan belajar siswa
-2. Menggunakan 4 model *machine learning* yaitu *Extreme Gradient Boosting* (XGBoost), *Support Vector Machine* (SVM), *Decision Tree* (Tree), dan *Random Forest* untuk memprediksi kinerja siswa
+2. Menggunakan 4 model *machine learning* yaitu *Extreme Gradient Boosting* (XGBoost), *Support Vector Machine* (SVM), *Naive Bayes*, dan *Random Forest* untuk memprediksi kinerja siswa
 3. Menggunakan confusion matrix dan f1 score pada masing-masing model *machine learning* untuk menemukan model terbaik berdasarkan akurasi tertinggi.
 
 ## Data Understanding
@@ -254,7 +254,7 @@ Pada pemodelan ini, SVM diimplementasikan menggunakan `SVC` dari library `sklear
 
 Algoritman ini merupakan algoritma klasifikasi berbasis probabilistik yang didasarkan pada Teorema Bayes. Algoritma ini bekerja dengan asumsi bahwa semua fitur saling independen (meskipun dalam kenyataan sering tidak sepenuhnya demikian). <br>
 
-Pada pemodelan ini, Naive Bayes diimplementasikan menggunakan `GaussianNB` dari library `sklearn.naive_bayes` karena datanya numerik dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. 
+Pada pemodelan ini, Naive Bayes diimplementasikan menggunakan `GaussianNB` dari library `sklearn.naive_bayes` karena datanya numerik dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. Parameter yang digunakan yaitu `var_smoothing` untuk mencegah pembagian oleh nol dengan menambahkan nilai kecil ke varians data.
 
 ### 5. Pemilihan Model
 
@@ -306,28 +306,28 @@ Rumusnya:
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Random Forest*
 
 <img src="https://github.com/user-attachments/assets/fbae5a5f-a7e5-44a7-88bd-cbad0d671880" align="center"><br>
-Dari gambar di atas, terdapat 11 data yang diprediksi salah pada Grade A dan 14 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.92 dengan akurasi tepatnya adalah 0.9207 atau ≈92.07%.
+Dari gambar di atas, terdapat 8 data yang diprediksi salah pada Grade A dan 14 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9269 atau ≈92.69%.
 
 #### 2. Model Development dengan XGBoots
 
-Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model SVM
+Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *XGBoots*
 
 <img src="https://github.com/user-attachments/assets/485358ae-d942-49aa-a9ca-4cc9ed2ae651" align="center"><br>
 Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9311 atau ≈93.11%.
 
 #### 3. Model Model Development dengan SVM
 
-Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
+Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *SVM*
 
 <img src="https://github.com/user-attachments/assets/a1433936-b7da-43ef-8a83-27d36cf90f08" align="center"><br>
-Dari gambar di atas, terdapat 18 data yang diprediksi salah pada Grade A dan 29 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
+Dari gambar di atas, terdapat 16 data yang diprediksi salah pada Grade A dan 28 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.77 dengan akurasi tepatnya adalah 0.7807 atau ≈78.07%.
 
 #### 4. Model Model Development dengan Naive Bayes
 
-Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
+Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Naive Bayes*
 
 <img src="https://github.com/user-attachments/assets/45b8cd12-35e0-4195-99a3-ed7b55421982" align="center"><br>
-Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 24 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
+Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 13 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.79 dengan akurasi tepatnya adalah 0.7933 atau ≈79.33%.
 
 ### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
@@ -336,13 +336,19 @@ Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk 
 Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *XGBoots* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada Grade A. 
 
 ## Kesimpulan
-1. Berdasarkan data yang diperoleh, waktu belajar yang optimal berada ditas 20 jam. 
-2. Berdasarkan data yang diperoleh, absen (ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA)
-3. rata-rata siswa yang tidak mengikuti bimbingan belajar lebih banyak berada pada prestasi kelas bawah (Grade F)
+Berdasarkan hasil yang diperoleh setelah melakukan proses EDA dan pengujiaan model terbaik untuk peningkatan prestasi siswa dapat dismpulkan bahwah:
+1. Terdapat hubungan positif antara durasi belajar mingguan yang lebih tinggi dengan performa akademik (GPA dan GradeClass), namun tidak terlalu signifikan kenaikannya. Oleh karena itu, direkomendasikan waktu belajar berada diatas 20 jam per minggu.
+2. Tingkat absensi yang tinggi secara konsisten menunjukkan korelasi negatif dengan performa akademik. Siswa dengan absensi tinggi cenderung memiliki GPA lebih rendah. Oleh karena iu, perlu diidentifikasi siswa dengan pola absensi tinggi untuk intervensi dini.
+3. Siswa yang tidak mengikuti bimbingan belajar menunjukkan GPA yang lebih rendah dibandingkan mereka yang mengikuti. Olehkarena itu siswa perlu disiplin mengikuti bimbingan belajar.
 4. Jenis kelamin yang berbeda memiliki prestasi yang tidak jauh berbeda. Dari data yang diperoleh, mayoritas perempuan mengalami penurunan prestasi pada Grade F, Grade D, Grade B dan Grade A dibandingkan dengan laki-laki.
-5. Mayoritas siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik mempengaruhi turunya nilai pretasinya(GPA)
-6. Dukungan orang tua sangat mempengaruhin nilai prestasi siswa (GPA). Semakin tinggi dukungan orang tua, maka semakin meningkat nilai prestasi dari anaknya.
-7. Setelah menguji data menggunakan 4 model *machine learning*, yaitu ***Extreme Gradient Boosting* (XGBoost)**, ***Support Vector Machine* (SVM)**, ***Naive Bayes**, dan ***Random Forest*** untuk memprediksi performa siswa, diperoleh model *XGBoost* merupakan model terbaik dibandingkan model lainnya berdasarkan skor akurasi, skor F1, dan jumlah kesalahan klasifikasi yang paling sedikit.
+5. Terjadi penurunan sedikit nilai pretasinya(GPA) siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik. Sedangkan untuk kegiatan sukarelaan terlihat merata atau seimbang. 
+6. Siswa yang menerima dukungan orang tua memiliki nilai rata-rata lebih tinggi dibandingkan yang tidak.
+7. *Exploratory Data Analysis* (EDA) menunjukkan bahwa performa akademik siswa dipengaruhi oleh kombinasi faktor internal (seperti durasi belajar dan pola absensi) serta faktor eksternal (seperti keterlibatan orang tua dan partisipasi dalam kegiatan non-akademik)
+8. Setelah menguji data menggunakan 4 model *machine learning*, yaitu ***Extreme Gradient Boosting* (XGBoost)**, ***Support Vector Machine* (SVM)**, ***Naive Bayes*** dan ***Random Forest*** untuk memprediksi performa siswa, diperoleh:
+    * ***XGBoost*** adalah model terbaik untuk memprediksi performa siswa pada dataset ini, dengan akurasi dan F1-Score tertinggi.
+    * ***Random Forest*** memberikan hasil yang hampir setara dengan XGBoost dan lebih mudah diimplementasikan.
+    * ***SVM*** memberikan performa baik tetapi memerlukan penyesuaian parameter untuk hasil optimal.
+    * ***Naive Bayes*** adalah model tercepat namun memiliki performa yang jauh lebih rendah karena asumsi independensi antar fitur yang tidak sesuai dengan dataset.
 
 ## Referensi
 1. Abdul Rahman. "Klasifikasi Performa Akademik Siswa Menggunakan Metode Decision Tree dan Naive Bayes", Vol. 13 No.1 (2023) 22-31, ISSN 2503-3247. SINTA Peringkat 4, diakses pada 28 November 2024.

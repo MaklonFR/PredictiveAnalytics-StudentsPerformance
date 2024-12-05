@@ -65,6 +65,7 @@ Setelah diperiksa apakah terdapat kolom yang bernilai null, hasilnya adalah tida
 
 Selanjutnya kita akan melihat pesebaran data pada kolom nuerikal pada gambar dibawah ini:
 
+
 ![data-numerikal](https://github.com/user-attachments/assets/1815862b-2aa3-47c9-8213-0922092d39ae)<br>
 Interprestasi:
 1. Pada kolom Age, dapat dilihat rata-rata siswa berumur 15-17 tahun. Dapat disimpulkan tidak ada Outlier yang tersebar.
@@ -80,7 +81,7 @@ Semua kategorikal: ["Gender", "Ethnicity", "ParentalEducation", "Tutoring", "Par
 
 Pertama, kita akan melihat nilai berbeda pada kolom kategorikal pada gambar tabel dibawah ini:
 
-![nilai-beda-data-katergorikal](https://github.com/user-attachments/assets/4e18294d-df18-429b-b10c-80f388b30145)<br>
+<img src="https://github.com/user-attachments/assets/4e18294d-df18-429b-b10c-80f388b30145" align="center"><br>
 Dapat dilihat pada tabel nilai berbeda pada:
 1. Kolom gender = 2;
 2. Kolom Etnicity = 4;

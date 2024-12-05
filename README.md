@@ -139,7 +139,7 @@ Absen(ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA).
 
 #### 3. Membandingkan Bimbingan Belajar dengan Nilai Prestasi Siswa
 
-<img src="https://github.com/user-attachments/assets/95d5567c-cef2-43e7-8851-658906f0136c" align="center"><br>
+<img src="https://github.com/user-attachments/assets/9ecf2453-805f-4757-96a5-fcf847e2ea06" align="center"><br>
 Interpretasi:
 Banyak siswa yang tidak mengikuti bimbingan belajar yang mendapat prestasi rendah (Grade F)
 

@@ -183,8 +183,7 @@ Pada bagian ini, kita akan mengubah data mentah menjadi bentuk yang lebih mudah 
 ### Train-Test-Split
 Langkah awal kita mengubah data objek ke data numeri dengan memanggil fungsi konversi objek to numerik. Selanjutnya, karena target kita adalah variabel GradeClass untuk mengetahui akurasi prediksi dari kategori kelas prestasi terbaik, maka kita akan membuang kolom tersebut dari data dan assign kolom tersebut ke variabel baru.Data training digunakan untuk melatih model dengan data yang ada, sedangkan data testing digunakan untuk menguji model yang dibuat menggunakan data yang belum dilatih. Pembagian data ini dilakukan dengan perbandingan 80% : 20% untuk data training dan data testing menggunakan train_test_split dari library sklearn. Berikut adalah data traning yang akan diproses (ditampilkan contoh 5 baris teratas):
 
-![data-training-x](https://github.com/user-attachments/assets/175b7534-4936-4e7c-9a66-fe29d96c654d) <br>
-
+<img src="https://github.com/user-attachments/assets/175b7534-4936-4e7c-9a66-fe29d96c654d" align="center"><br>
 
 ## Modeling
 
@@ -226,8 +225,7 @@ Pada proyek ini, penilaian model menggunakan confusion matrix, akurasi, dan f1 s
 
 1. Matriks Confusion merupakan matriks yang menunjukkan jumlah prediksi benar dan salah untuk setiap kelas. Contoh dari Matriks Confusion beserta labelnya dapat dilihat pada gambar di bawah ini.
 
-![confusion-matrix-1](https://github.com/user-attachments/assets/0b200762-9005-4765-9924-8076faf96046)<br>
-
+<img src="https://github.com/user-attachments/assets/0b200762-9005-4765-9924-8076faf96046" align="center"><br>
 Formatnya:
 [[TP, FP],
  [FN, TN]]
@@ -239,23 +237,23 @@ Terdapat 4 label pada matriks confusion seperti yang terlihat di gambar, yaitu T
     d. *False Negative* (FN) merupakan jumlah data yang ditebak dengan salah karena diprediksi negatif, sedangkan aslinya adalah positif.
     
 2. Akurasi merupakan Persentase prediksi benar terhadap total prediksi.<br>
-Formatnya:<br>
-![format-akurasi](https://github.com/user-attachments/assets/689a2934-4adb-42e8-b46a-e59f2e6b0508)
+Formatnya:
 
-3. Skor F1 merupakan rata-rata harmonik dari precision dan recall.
-Formatnya:<br>
-![scor-f1](https://github.com/user-attachments/assets/de176d91-a6b6-40a7-adc4-dd0d755eaa16)
+<img src="https://github.com/user-attachments/assets/689a2934-4adb-42e8-b46a-e59f2e6b0508" align="center"><br>
+4. Skor F1 merupakan rata-rata harmonik dari precision dan recall.
+Formatnya:
 
-4. Precision merupakan proporsi prediksi positif yang benar-benar benar.<br>
-Rumusnya: <br>
-![pressecion](https://github.com/user-attachments/assets/12b1ad68-e216-4bde-bce7-cfea6652e7e7)
+<img src="https://github.com/user-attachments/assets/de176d91-a6b6-40a7-adc4-dd0d755eaa16" align="center"><br>
+5. Precision merupakan proporsi prediksi positif yang benar-benar benar.<br>
+Rumusnya:
 
+<img src="https://github.com/user-attachments/assets/12b1ad68-e216-4bde-bce7-cfea6652e7e7" align="center"><br>
 *Contoh*: Jika model memprediksi 10 data sebagai positif, tetapi hanya 7 yang benar-benar positif, maka precision adalah 7/10 = 0.7.
 
 5. Recall (Sensitivity) merupakan proporsi data positif yang terdeteksi dengan benar oleh model.<br>
-Rumusnya: <br>
-![recall](https://github.com/user-attachments/assets/2f6d9e5d-bd59-4999-84ae-9e85146e385c)
+Rumusnya:
 
+<img src="https://github.com/user-attachments/assets/2f6d9e5d-bd59-4999-84ae-9e85146e385c" align="center"><br>
 *Contoh*: Jika model memprediksi 10 data sebagai positif, tetapi hanya 7 yang benar-benar positif, maka precision adalah 7/10 = 0.7.
  
 ### Penerapan Matriks Confusion, Akurasi, dan Skor f1
@@ -264,39 +262,34 @@ Rumusnya: <br>
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Random Forest*
 
-![random_forest](https://github.com/user-attachments/assets/fbae5a5f-a7e5-44a7-88bd-cbad0d671880)<br>
-
+<img src="https://github.com/user-attachments/assets/fbae5a5f-a7e5-44a7-88bd-cbad0d671880" align="center"><br>
 Dari gambar di atas, terdapat 11 data yang diprediksi salah pada Grade A dan 14 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.92 dengan akurasi tepatnya adalah 0.9207 atau ≈92.07%.
 
 #### 2. Model Development dengan XGBoots
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model SVM
 
-![XGBoots](https://github.com/user-attachments/assets/485358ae-d942-49aa-a9ca-4cc9ed2ae651) <br>
-
+<img src="https://github.com/user-attachments/assets/485358ae-d942-49aa-a9ca-4cc9ed2ae651" align="center"><br>
 Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9311 atau ≈93.11%.
 
 #### 3. Model Model Development dengan SVM
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
 
-![svm](https://github.com/user-attachments/assets/a1433936-b7da-43ef-8a83-27d36cf90f08)<br>
-
+<img src="https://github.com/user-attachments/assets/a1433936-b7da-43ef-8a83-27d36cf90f08" align="center"><br>
 Dari gambar di atas, terdapat 18 data yang diprediksi salah pada Grade A dan 29 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
 
 #### 4. Model Model Development dengan Naive Bayes
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model KNN
 
-![naive](https://github.com/user-attachments/assets/45b8cd12-35e0-4195-99a3-ed7b55421982)<br>
-
+<img src="https://github.com/user-attachments/assets/45b8cd12-35e0-4195-99a3-ed7b55421982" align="center"><br>
 Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 24 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.74 dengan akurasi tepatnya adalah 0.7557 atau ≈75.57%.
 
 ### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
 
-![barplot](https://github.com/user-attachments/assets/350ef07f-2d5f-4f94-b331-ff3a1ee15fdb)<br>
-
+<img src="https://github.com/user-attachments/assets/350ef07f-2d5f-4f94-b331-ff3a1ee15fdb" align="center"><br>
 Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *XGBoots* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada Grade A. 
 
 ## Kesimpulan

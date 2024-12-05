@@ -119,9 +119,9 @@ Tahap keenam, kita akan melihat persebaran data dari masing-masing kategori kela
 
 <img src="https://github.com/user-attachments/assets/e66a9c49-e205-4c02-8f44-896b102faf37" align="center"><br>
 Interpretasi:
-*Siswa berada pada Grade F (kelas terendah) memiliki presentasi terbayak yakni 50.6%.
-*Siswa berada pada Grade A (kelas tertinggi) memiliki presentasi sedikit yakni 4.5%.
-*Siswa yang lainnya berada pada Grade B (11.2%), Grade C(16.3%) dan Grade D (17.3%)
+1. Siswa berada pada Grade F (kelas terendah) memiliki presentasi terbayak yakni 50.6%.
+2. Siswa berada pada Grade A (kelas tertinggi) memiliki presentasi sedikit yakni 4.5%.
+3. Siswa yang lainnya berada pada Grade B (11.2%), Grade C(16.3%) dan Grade D (17.3%)
 
 Langkah terakhir, kita akan membentuk histogram dari variabel-variabel numerikal untuk melihat persebaran data:
 
@@ -131,37 +131,39 @@ Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi nor
 
 ### Multivariate Analysis
 
-#### 1. Membandingkan waktu belajar mingguan dengan prestasi siswa
+Pada bagian ini, akan ditunjukan hubungan antara dua variabel biasa disebut sebagai bivariate EDA. Selanjutnya, kita akan melakukan analisis data pada fitur kategori dan numerik.
+
+#### 1. Ananlisis data pada fitur numerik StudyTimeWeekly (Waktu belajar setiap minggu) dengan GPA (Nilai Prestasi)
 
 <img src="https://github.com/user-attachments/assets/e3460ee9-6449-4533-9b03-3e227749d36c" align="center"><br>
 Interpretasi:
 Siswa yang waktu belajaranya banyak mempengaruhi naiknya prestasi belajar(GPA).
 
-#### 2. Membandingkan Ketidakhadiran(Absen) dengan Nilai Prestasi Siswa
+#### 2. Ananlisis data pada fitur numerik Absences (Ketidakhadiran) dengan GPA (Nilai Prestasi)
 
 <img src="https://github.com/user-attachments/assets/90ebe42b-3f7e-44f6-9f6d-ac41cf45c9ce" align="center"><br>
 Interpretasi:
 Absen(ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA).
 
-#### 3. Membandingkan Bimbingan Belajar dengan Nilai Prestasi Siswa
+#### 3. Ananlisis data pada fitur kategori Tutoring (Bimbingan Belajar) dengan GradeClass (Kategori Kelas)
 
 <img src="https://github.com/user-attachments/assets/9ecf2453-805f-4757-96a5-fcf847e2ea06" align="center"><br>
 Interpretasi:
 Banyak siswa yang tidak mengikuti bimbingan belajar yang mendapat prestasi rendah (Grade F)
 
-#### 4. Membandingkan Jenis Kelamin Pada Nilai Prestasi Siswa
+#### 4. Ananlisis data pada fitur kategori Genre (Jenis Kelamin) dengan GradeClass (Kategori Kelas)
 
 <img src="https://github.com/user-attachments/assets/71e91698-39b4-43c7-8eec-de9e0a342a6f" align="center"><br>
 Interpretasi:
 Jenis kelamin pria lebih dominan memiliki prestasi lebih tinggi dibandingkan dengan wanita
 
-#### 5. Membandingkan Kegiatan Ekskulikuler dengan Nilai Prestasi Siswa
+#### 5. Ananlisis data pada fitur kategori kegiatan non akademik (Extracurricular, Sports, Music, Volunteering) dengan GPA (Nilai Prestasi)
 
 <img src="https://github.com/user-attachments/assets/684468d1-1942-4065-91cd-1c0b83923b95" align="center"><br>
 Interpretasi:
 Lebih banyak siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik mempengaruhi turunya nilai pretasi(GPA) mereka
 
-#### 6. Membandingkan Dukungan Orang Tua dengan Nilai Prestasi Siswa
+#### 6. Ananlisis data pada fitur kategori ParentalSupport (Dukungan Orang Tua) dengan GradeClass (Kategori Kelas)
 
 <img src="https://github.com/user-attachments/assets/c711088d-2d29-4056-8d0c-37d5e9737d19" align="center"><br>
 Interpretasi:
@@ -184,12 +186,47 @@ Interpretasi:
 Nilai prestasi siswa (GPA) memiliki  korelasi negatif yang kuat pada ketidakhadiran (garis regresi menurun ke kanan bawah) dan korelatif positif cukup lemah pada waktu belajar setiap minggu (garis regresi naik ke kanan atas)
 
 ## Data Data Preparation
-Pada bagian ini, kita akan mengubah data mentah menjadi bentuk yang lebih mudah dipahami yang iasa disebut data Preprocesing. 
+Pada bagian ini kita akan melakukan beberapa tahap persiapan data, yaitu:
+1. Drop kolom yang tidak digunakan dalam pemrosesan data
+2. Encoding fitur kategori
+3. Drop kolom yang tidak digunakan
+4. Label hot encoding
+5. Pembagian dataset dengan fungsi train_test_split dari library sklearn.
+
+### Drop kolom yang tidak digunakan dalam pemrosesan data
+
+Pada tahap ini ada beberapa kolom pada dataset yang tidak perlu digunakan dalam pemrosesan data yakni `StudentID`, `Ethnicity` dan `ParentalEducation`. Kolom-kolom ini akan dihapus menggunakan fungsi `drop()`. Hasilnya dapat dilihat pada gambar dibawah ini:
+
+<img src="https://github.com/user-attachments/assets/69b9a96d-6baf-46da-988c-8a6897f65549" align="center"><br>
+Hasilnya menampilkan variabel kolom `StudentID`, `Ethnicity` dan `ParentalEducation` sudah terhapus. Dataset siswa yang akan kita proses saat ini terdiri dari 2 tipe data float64, 2 tipe data int64 dan 8 tipe data objek(string).
+
+### Encoding Fitur Kategori
+
+Encoding Fitur Kategorikal dilakukan terhadap 5 variabel, yakni:
+1. `Tutoring` (Apakah siswa mengikuti bimbingan belajar?)
+2. `Extracurricular` (Apakah siswa mengikuti kegiatan ektrakulikuler?)
+3. `Sports` (Apakah siswa mengikuti kegiatan olahraga?)
+4. `Music` (Apakah siswa mengikuti kegiatan musik?)
+5. `Volunteering` (Apakah siswa mengikuti kegiatan sukarelaan?)
+
+Kategori-kategori tersebut berisi nilai ya (yes) dan tidak (no)
+
+### One Hot Encoding Fitur Kategori
+
+One Hot Encoding dilakukan terhadap 1 variabel, yaitu `Gender` (Jenis kelamin responden), karena kategori ini tidak memiliki urutan tertentu.
+
+### Encoding Ordinal fitur kategori
+
+Encoding Ordinal dilakukan terhadap 1 variabel, yaitu `ParentalSupport` (Dukungan Orang Tua) karena kategori ini memiliki urutan yaitu ['None', 'Low', 'Moderate', 'High', 'Very High']
+
+Hasil setelah dilakukan data preprocessing dapat dilihat pada gambar berikut:
+
+<img src="https://github.com/user-attachments/assets/632a0ef0-258b-4d2a-88d1-db70cc2c4a54" align="center"><br>
 
 ### Train-Test-Split
-Langkah awal kita mengubah data objek ke data numeri dengan memanggil fungsi konversi objek to numerik. Selanjutnya, karena target kita adalah variabel GradeClass untuk mengetahui akurasi prediksi dari kategori kelas prestasi terbaik, maka kita akan membuang kolom tersebut dari data dan assign kolom tersebut ke variabel baru.Data training digunakan untuk melatih model dengan data yang ada, sedangkan data testing digunakan untuk menguji model yang dibuat menggunakan data yang belum dilatih. Pembagian data ini dilakukan dengan perbandingan 80% : 20% untuk data training dan data testing menggunakan train_test_split dari library sklearn. Berikut adalah data traning yang akan diproses (ditampilkan contoh 5 baris teratas):
+Langkah awal kita mengubah data objek ke data numeri dengan memanggil fungsi konversi objek to numerik. Selanjutnya, karena target kita adalah variabel GradeClass untuk mengetahui akurasi prediksi dari kategori kelas prestasi terbaik, maka kita akan membuang kolom tersebut dari data dan assign kolom tersebut ke variabel baru. Data training digunakan untuk melatih model dengan data yang ada, sedangkan data testing digunakan untuk menguji model yang dibuat menggunakan data yang belum dilatih. Pembagian data ini dilakukan dengan perbandingan 80% : 20% untuk data training dan data testing menggunakan train_test_split dari library sklearn. Berikut adalah data traning yang akan diproses (ditampilkan contoh 5 baris teratas):
 
-<img src="https://github.com/user-attachments/assets/175b7534-4936-4e7c-9a66-fe29d96c654d" align="center"><br>
+<img src="https://github.com/user-attachments/assets/b9facf2a-f21c-48a4-96f4-ab6d08d915cb" align="center"><br>
 
 ## Modeling
 

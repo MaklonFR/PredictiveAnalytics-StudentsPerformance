@@ -213,7 +213,7 @@ Kategori-kategori tersebut berisi nilai ya (yes) dan tidak (no)
 
 ### One Hot Encoding Fitur Kategori
 
-One Hot Encoding dilakukan terhadap 1 variabel, yaitu `Gender` (Jenis kelamin responden), karena kategori ini tidak memiliki urutan tertentu.
+One Hot Encoding dilakukan terhadap 1 variabel, yaitu `Gender` (Jenis kelamin siswa), karena kategori ini tidak memiliki urutan tertentu.
 
 ### Encoding Ordinal fitur kategori
 

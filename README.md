@@ -206,11 +206,11 @@ Hasilnya menampilkan variabel kolom `StudentID`, `Ethnicity` dan `ParentalEducat
 
 Pada bagian ini kita perlu mengubah data kategori (yang berbentuk teks atau label) menjadi format numerik agar dapat diproses oleh algoritma machine learning, karena dataset kita sebelumnya sudah diubah dalam bentuk objek (string) pada tahap eksplorasi data analis. Encoding Fitur Kategorikal dilakukan 3 bagian, yakni:
 
-1. *Label Encoding* yaitu, mengonversi nilai kategori menjadi angka integer (`0` dan `1`)). Variabel yang akan diproses yakni: <br>
-    a. *Tutoring* (Apakah siswa mengikuti bimbingan belajar?)
-    b. *Extracurricular* (Apakah siswa mengikuti kegiatan ektrakulikuler?)
-    c. *Sports* (Apakah siswa mengikuti kegiatan olahraga?
-    d. *Music* (Apakah siswa mengikuti kegiatan musik?)
+1. *Label Encoding* yaitu, mengonversi nilai kategori menjadi angka integer (`0` dan `1`)). Variabel yang akan diproses yakni:  <br>
+    a. *Tutoring* (Apakah siswa mengikuti bimbingan belajar?) <br>
+    b. *Extracurricular* (Apakah siswa mengikuti kegiatan ektrakulikuler?) <br>
+    c. *Sports* (Apakah siswa mengikuti kegiatan olahraga? <br>
+    d. *Music* (Apakah siswa mengikuti kegiatan musik?) <br>
     e. *Volunteering* (Apakah siswa mengikuti kegiatan sukarelaan?)
 2. *One Hot Ecoding* yaitu mengubah setiap kategori menjadi kolom biner terpisah untuk data tidak terurut). Variabel yang akan diproses yakni Gender.
 3. *Ordinal Encoding* yaitu memberikan nilai integer berdasarkan hierarki atau urutan kategori). Variabel yang akan diproses yakni ParentalSupport.

@@ -44,7 +44,7 @@ Infromasi dataset tersebut dapat dilihat pada gambar dibawah ini:
 <img src="https://github.com/user-attachments/assets/32e0f6ad-799b-4949-92fe-09eb4238385d" align="center"><br>
 Dari gambar yang ditampilkan, terdapat 12 variabel bertipe int64 dan 3 variabel bertipe fload64
 
-### Informasi Keterangan Variabel pada Data
+### Deskripsi Variabel
 Dataset ini memiliki 15 variabel dengan keterangan sebagai berikut.
 Variabel | Keterangan
 ----------|----------
@@ -67,7 +67,10 @@ GradeClass | Klasifikasi nilai siswa berdasarkan IPK (0: 'A' (IPK >= 3,5)), (1: 
 ### Menangani Missing Value dan Duplicate Data (Duplikasi Data)
 Pada tahap ini kita akan mengecek data yang tidak valid pada dataset. Setelah diperiksa apakah terdapat kolom yang bernilai null, hasilnya adalah tidak ada. Sedangkan data duplikat atau data ganda juga tidak ada. Maka dengan demikian data siapa untuk dianalisis pada tahap selanjutnya.
 
-### Univariate Analysis
+### Konversi nilai numerik kategorikal ke objek(string)
+Pada tahap ini, karena dataset kita tipe kategorikal sudah dalam bentuk nilai numerik, maka kita perlu membuat fungsi konversi nilai number kategorikal ke objek (string). Tujuan dari langkah ini yaitu untuk menampilkan label fitur visualisasi dalam proses analisis data dengan teknik Univariate EDA dan Multivariate EDA.
+
+### Univariate Analysis EDA
 Ada beberapa tahap yang akan kita lakukan, yakni:
 Tahap pertama, membagi variabel-variabel menjadi 2 jenis, yaitu variabel numerikal dan variabel kategorikal. Berikut merupakan kolom-kolom yang termasuk dalam variabel numerikal maupun kategorikal. <br>
 Semua numerikal: ["Age", "StudyTimeWeekly", "Absences", "GPA"] <br>
@@ -129,7 +132,7 @@ Langkah terakhir, kita akan membentuk histogram dari variabel-variabel numerikal
 Interpretasi: 
 Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi normal.
 
-### Multivariate Analysis
+### Multivariate Analysis EDA
 
 Pada bagian ini, akan ditunjukan hubungan antara dua variabel biasa disebut sebagai bivariate EDA. Selanjutnya, kita akan melakukan analisis data pada fitur kategori dan numerik.
 
@@ -186,12 +189,11 @@ Interpretasi:
 Nilai prestasi siswa (GPA) memiliki  korelasi negatif yang kuat pada ketidakhadiran (garis regresi menurun ke kanan bawah) dan korelatif positif cukup lemah pada waktu belajar setiap minggu (garis regresi naik ke kanan atas)
 
 ## Data Data Preparation
-Pada bagian ini kita akan melakukan beberapa tahap persiapan data, yaitu:
+
+Pada tahap ini kita akan melakukan proses transformasi pada data sehingga menjadi bentuk yang cocok untuk proses pemodelan. Ada beberapa tahap persiapan data perlu dilakukan, yaitu:
 1. Drop kolom yang tidak digunakan dalam pemrosesan data
 2. Encoding fitur kategori
-3. Drop kolom yang tidak digunakan
-4. Label hot encoding
-5. Pembagian dataset dengan fungsi train_test_split dari library sklearn.
+3. Pembagian dataset dengan fungsi train_test_split dari library sklearn.
 
 ### Drop kolom yang tidak digunakan dalam pemrosesan data
 
@@ -202,23 +204,16 @@ Hasilnya menampilkan variabel kolom `StudentID`, `Ethnicity` dan `ParentalEducat
 
 ### Encoding Fitur Kategori
 
-Encoding Fitur Kategorikal dilakukan terhadap 5 variabel, yakni:
-1. `Tutoring` (Apakah siswa mengikuti bimbingan belajar?)
-2. `Extracurricular` (Apakah siswa mengikuti kegiatan ektrakulikuler?)
-3. `Sports` (Apakah siswa mengikuti kegiatan olahraga?)
-4. `Music` (Apakah siswa mengikuti kegiatan musik?)
-5. `Volunteering` (Apakah siswa mengikuti kegiatan sukarelaan?)
+Pada bagian ini kita perlu mengubah data kategori (yang berbentuk teks atau label) menjadi format numerik agar dapat diproses oleh algoritma machine learning, karena dataset kita sebelumnya sudah diubah dalam bentuk objek (string) pada tahap eksplorasi data analis. Encoding Fitur Kategorikal dilakukan 3 bagian, yakni:
 
-Kategori-kategori tersebut berisi nilai ya (yes) dan tidak (no)
-
-### One Hot Encoding Fitur Kategori
-
-One Hot Encoding dilakukan terhadap 1 variabel, yaitu `Gender` (Jenis kelamin siswa), karena kategori ini tidak memiliki urutan tertentu.
-
-### Encoding Ordinal fitur kategori
-
-Encoding Ordinal dilakukan terhadap 1 variabel, yaitu `ParentalSupport` (Dukungan Orang Tua) karena kategori ini memiliki urutan yaitu ['None', 'Low', 'Moderate', 'High', 'Very High']
-
+1. *Label Encoding* yaitu, mengonversi nilai kategori menjadi angka integer (0 dan 1)). Variabel yang akan diproses yakni:
+    a. *Tutoring* (Apakah siswa mengikuti bimbingan belajar?)
+    b. *Extracurricular* (Apakah siswa mengikuti kegiatan ektrakulikuler?)
+    c. *Sports* (Apakah siswa mengikuti kegiatan olahraga?
+    d. *Music* (Apakah siswa mengikuti kegiatan musik?)
+    e. *Volunteering* (Apakah siswa mengikuti kegiatan sukarelaan?)
+2. *One Hot Ecoding* yaitu mengubah setiap kategori menjadi kolom biner terpisah untuk data tidak terurut). Variabel yang akan diproses yakni Gender.
+3. *Ordinal Encoding* yaitu memberikan nilai integer berdasarkan hierarki atau urutan kategori). Variabel yang akan diproses yakni ParentalSupport.
 Hasil setelah dilakukan data preprocessing dapat dilihat pada gambar berikut:
 
 <img src="https://github.com/user-attachments/assets/632a0ef0-258b-4d2a-88d1-db70cc2c4a54" align="center"><br>
@@ -227,6 +222,8 @@ Hasil setelah dilakukan data preprocessing dapat dilihat pada gambar berikut:
 Langkah awal kita mengubah data objek ke data numeri dengan memanggil fungsi konversi objek to numerik. Selanjutnya, karena target kita adalah variabel GradeClass untuk mengetahui akurasi prediksi dari kategori kelas prestasi terbaik, maka kita akan membuang kolom tersebut dari data dan assign kolom tersebut ke variabel baru. Data training digunakan untuk melatih model dengan data yang ada, sedangkan data testing digunakan untuk menguji model yang dibuat menggunakan data yang belum dilatih. Pembagian data ini dilakukan dengan perbandingan 80% : 20% untuk data training dan data testing menggunakan train_test_split dari library sklearn. Berikut adalah data traning yang akan diproses (ditampilkan contoh 5 baris teratas):
 
 <img src="https://github.com/user-attachments/assets/b9facf2a-f21c-48a4-96f4-ab6d08d915cb" align="center"><br>
+
+Kemudian, kita melihat jumlah masing-masing *GradeClass* (Kategori Kelas) pada data testing untuk selanjutnya ditransformasikan menggunakan `LabelEncoder()`. `LabelEncoder()` berfungsi untuk memetakan setiap kategori unik dalam kolom *GradeClass* menjadi angka integer mulai dari `0`
 
 ## Modeling
 
@@ -242,7 +239,7 @@ Pada pemodelan ini, *Random Forest* diimplementasikan menggunakan `RandomForestC
 
 Algoritma Extreme Gradient Boosting merupakan salah satu algoritma boosting yang sangat kuat untuk tugas klasifikasi dan regresi. XGBoost dirancang untuk efisiensi, fleksibilitas, dan performa tinggi, serta sering digunakan dalam kompetisi machine learning. <br>
 
-Pada pemodelan ini, XGBoost diimplementasikan menggunakan `XGBClassifier` dari library `xgboost` dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. Parameter yang digunakan pada model ini adalah `max_depth` yaitu kedalaman maksimum setiap tree, `n_estimators` yaitu jumlah tree yang akan dibuat, `random_state` yaitu mengontrol seed acak yang diberikan pada setiap iterasi, `learning rate` yaitu mengatur langkah setiap iterasi ketika meminimumkan *loss function*, dan `n_jobs` yaitu mengatur jumlah CPU threads untuk menjalankan XGBoost. Pada proyek ini, parameter yang digunakan adalah `max_depth = 10`, `n_estimators = 125`, `random_state = 30`, `learning_rate = 0.01`, `n_jobs = 20`.
+Pada pemodelan ini, XGBoost diimplementasikan menggunakan `XGBClassifier` dari library `xgboost` dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. Parameter yang digunakan pada model ini adalah `max_depth` yaitu kedalaman maksimum setiap tree, `n_estimators` yaitu jumlah tree yang akan dibuat, `random_state` yaitu mengontrol seed acak yang diberikan pada setiap iterasi, `learning rate` yaitu mengatur langkah setiap iterasi ketika meminimumkan *loss function*, dan `n_jobs` yaitu mengatur jumlah CPU threads untuk menjalankan XGBoost. Pada proyek ini, parameter yang digunakan adalah `max_depth = 10`, `n_estimators = 125`, `random_state = 30`, `learning_rate = 0.01`, `n_jobs = -1`.
 
 ### 3. Model Development dengan Support Vector Machine* (SVM)
 
@@ -254,11 +251,7 @@ Pada pemodelan ini, SVM diimplementasikan menggunakan `SVC` dari library `sklear
 
 Algoritman ini merupakan algoritma klasifikasi berbasis probabilistik yang didasarkan pada Teorema Bayes. Algoritma ini bekerja dengan asumsi bahwa semua fitur saling independen (meskipun dalam kenyataan sering tidak sepenuhnya demikian). <br>
 
-Pada pemodelan ini, Naive Bayes diimplementasikan menggunakan `GaussianNB` dari library `sklearn.naive_bayes` karena datanya numerik dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. Parameter yang digunakan yaitu `var_smoothing` untuk mencegah pembagian oleh nol dengan menambahkan nilai kecil ke varians data.
-
-### 5. Pemilihan Model
-
-Setelah semua model dijalankan, penulis memilih algoritma *XGBoost* sebagai model terbaik yang akan digunakan sebagai solusi untuk memprediksi performa siswa karena model ini memiliki akurasi dan skor f1 tertinggi dibandingkan model lainnya, serta kesalahan klasifikasi pada matriks confusion yang lebih kecil dibanding model lainnya. Penjelasan lebih lengkap mengenai alasan ini ada di bagian selanjutnya, yaitu **evaluation**.
+Pada pemodelan ini, Naive Bayes diimplementasikan menggunakan `GaussianNB` dari library `sklearn.naive_bayes` karena datanya numerik dengan memasukkan `X_train` dan `y_train` untuk melatih model, lalu menggunakan `X_test` dan `y_test` untuk menguji model dengan data testing yang tidak ada di data training. Parameter `var_smoothing` berfungsi menambahkan nilai kecil (`var_smoothing`) ke varians dari setiap fitur. Sedangkan Nilai `1e-9` adalah representasi ilmiah untuk angka `0.000000001` (atau `10⁻⁹`). Ini digunakan untuk menambahkan nilai kecil pada varians, sehingga tidak ada nilai varians yang terlalu kecil untuk menghasilkan masalah numerik.
 
 ## Evaluation
 
@@ -305,34 +298,34 @@ Rumusnya:
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Random Forest*
 
-<img src="https://github.com/user-attachments/assets/fbae5a5f-a7e5-44a7-88bd-cbad0d671880" align="center"><br>
+<img src="https://github.com/user-attachments/assets/2fefd179-4ab8-451b-bb4f-6ad86f5ee29d" align="center"><br>
 Dari gambar di atas, terdapat 8 data yang diprediksi salah pada Grade A dan 14 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9269 atau ≈92.69%.
 
 #### 2. Model Development dengan XGBoots
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *XGBoots*
 
-<img src="https://github.com/user-attachments/assets/485358ae-d942-49aa-a9ca-4cc9ed2ae651" align="center"><br>
-Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9311 atau ≈93.11%.
+<img src="https://github.com/user-attachments/assets/6a28e4c0-af31-4ff7-b177-cdbdf09e3ba7" align="center"><br>
+Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9332 atau ≈93.32%.
 
 #### 3. Model Model Development dengan SVM
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *SVM*
 
-<img src="https://github.com/user-attachments/assets/a1433936-b7da-43ef-8a83-27d36cf90f08" align="center"><br>
-Dari gambar di atas, terdapat 16 data yang diprediksi salah pada Grade A dan 28 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.77 dengan akurasi tepatnya adalah 0.7807 atau ≈78.07%.
+<img src="https://github.com/user-attachments/assets/9958e5a6-ea7f-4618-9e03-0e5404e45e22" align="center"><br>
+Dari gambar di atas, terdapat 16 data yang diprediksi salah pada Grade A dan 28 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.77 dengan akurasi tepatnya adalah 0.7808 atau ≈78.08%.
 
 #### 4. Model Model Development dengan Naive Bayes
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Naive Bayes*
 
-<img src="https://github.com/user-attachments/assets/45b8cd12-35e0-4195-99a3-ed7b55421982" align="center"><br>
+<img src="https://github.com/user-attachments/assets/bd837e95-d081-46cd-a221-17f51ce7af33" align="center"><br>
 Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 13 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.79 dengan akurasi tepatnya adalah 0.7933 atau ≈79.33%.
 
 ### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
 
-<img src="https://github.com/user-attachments/assets/350ef07f-2d5f-4f94-b331-ff3a1ee15fdb" align="center"><br>
+<img src="https://github.com/user-attachments/assets/c0584047-c778-4d72-a451-b48e44764df5" align="center"><br>
 Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *XGBoots* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada Grade A. 
 
 ## Kesimpulan

@@ -204,7 +204,7 @@ Hasilnya menampilkan variabel kolom `StudentID`, `Ethnicity` dan `ParentalEducat
 
 ### Encoding Fitur Kategori
 
-Pada bagian ini kita perlu mengubah data kategori (yang berbentuk teks atau label) menjadi format numerik agar dapat diproses oleh algoritma machine learning, karena dataset kita sebelumnya sudah diubah dalam bentuk objek (string) pada tahap eksplorasi data analis. Encoding Fitur Kategorikal dilakukan 3 bagian, yakni:
+Pada bagian ini, karena dataset fitur kategori kita sebelumnya sudah diubah dalam bentuk objek (string) pada tahap eksplorasi data analis maka kita perlu mengubah data kategori (yang berbentuk teks atau label) menjadi format numerik agar dapat diproses oleh algoritma machine learning. Encoding Fitur Kategorikal dilakukan 3 bagian, yakni:
 
 1. *Label Encoding* yaitu, mengonversi nilai kategori menjadi angka integer (`0` dan `1`)). Variabel yang akan diproses yakni:  <br>
     a. *Tutoring* (Apakah siswa mengikuti bimbingan belajar?) <br>

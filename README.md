@@ -38,7 +38,8 @@ Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek in
 3. Menggunakan confusion matrix dan f1 score pada masing-masing model *machine learning* untuk menemukan model terbaik berdasarkan akurasi tertinggi.
 
 ## Data Understanding
-Dataset yang digunakan untuk mempredisksi kinerja siswa diambil dari platform kaggle yang dapat diakses pada tautan berikut (https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset) yang dipublikasikan oleh Rabie El Kharoua pada tanggal 13 Juni 2024. Kumpulan data ini berisi informasi lengkap tentang 2.392 siswa sekolah menengah, yang merinci demografi, kebiasaan belajar, keterlibatan orang tua, kegiatan ekstrakurikuler, dan prestasi akademik mereka. Variabel target, GradeClass, mengklasifikasikan nilai siswa ke dalam kategori yang berbeda, sehingga menyediakan kumpulan data yang kuat untuk penelitian pendidikan, pemodelan prediktif, dan analisis statistik. Dataset ini terdiri dari 1 file csv.<br>
+Dataset yang digunakan untuk mempredisksi kinerja siswa diambil dari platform kaggle yang dapat diakses pada tautan berikut (https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset) yang dipublikasikan oleh Rabie El Kharoua pada tanggal 13 Juni 2024. Kumpulan data ini berisi informasi lengkap tentang 2.392 siswa sekolah menengah, yang merinci demografi, kebiasaan belajar, keterlibatan orang tua, kegiatan ekstrakurikuler, dan prestasi akademik mereka. Variabel target, GradeClass, mengklasifikasikan nilai siswa ke dalam kategori yang berbeda, sehingga menyediakan kumpulan data yang kuat untuk penelitian pendidikan, pemodelan prediktif, dan analisis statistik. Dataset ini terdiri dari 1 file csv.
+
 Infromasi dataset tersebut dapat dilihat pada gambar dibawah ini:
 
 ![info-table](https://github.com/user-attachments/assets/32e0f6ad-799b-4949-92fe-09eb4238385d)
@@ -73,9 +74,9 @@ Pada tahap ini, karena dataset kita tipe kategorikal sudah dalam bentuk nilai nu
 
 ### Univariate Analysis EDA
 Ada beberapa tahap yang akan kita lakukan, yakni:
-Tahap pertama, membagi variabel-variabel menjadi 2 jenis, yaitu variabel numerikal dan variabel kategorikal. Berikut merupakan kolom-kolom yang termasuk dalam variabel numerikal maupun kategorikal. <br>
-Semua numerikal: ["Age", "StudyTimeWeekly", "Absences", "GPA"] <br>
-Semua kategorikal: ["Gender", "Ethnicity", "ParentalEducation", "Tutoring", "ParentalSupport", "Extracurricular", "Sports", "Music", "Volunteering", "GradeClass"]
+Tahap pertama, membagi variabel-variabel menjadi 2 jenis, yaitu variabel numerikal dan variabel kategorikal. Berikut merupakan kolom-kolom yang termasuk dalam variabel numerikal maupun kategorikal:
+* Semua numerikal: ["Age", "StudyTimeWeekly", "Absences", "GPA"]
+* Semua kategorikal: ["Gender", "Ethnicity", "ParentalEducation", "Tutoring", "ParentalSupport", "Extracurricular", "Sports", "Music", "Volunteering", "GradeClass"]
 
 Tahap kedua, kita akan melihat nilai berbeda pada kolom kategorikal pada gambar tabel dibawah ini:
 
@@ -221,12 +222,12 @@ Hasilnya menampilkan variabel kolom `StudentID`, `Ethnicity` dan `ParentalEducat
 
 Pada bagian ini, karena dataset fitur kategori kita sebelumnya sudah diubah dalam bentuk objek (string) pada tahap eksplorasi data analis maka kita perlu mengubah data kategori (yang berbentuk teks atau label) menjadi format numerik agar dapat diproses oleh algoritma machine learning. Encoding Fitur Kategorikal dilakukan 3 bagian, yakni:
 
-1. *Label Encoding* yaitu, mengonversi nilai kategori menjadi angka integer (`0` dan `1`)). Variabel yang akan diproses yakni:  <br>
-    a. *Tutoring* (Apakah siswa mengikuti bimbingan belajar?) <br>
-    b. *Extracurricular* (Apakah siswa mengikuti kegiatan ektrakulikuler?) <br>
-    c. *Sports* (Apakah siswa mengikuti kegiatan olahraga? <br>
-    d. *Music* (Apakah siswa mengikuti kegiatan musik?) <br>
-    e. *Volunteering* (Apakah siswa mengikuti kegiatan sukarelaan?)
+1. *Label Encoding* yaitu, mengonversi nilai kategori menjadi angka integer (`0` dan `1`)). Variabel yang akan diproses yakni:
+    * `Tutoring` (Apakah siswa mengikuti bimbingan belajar?)
+    * `Extracurricular` (Apakah siswa mengikuti kegiatan ektrakulikuler?)
+    * `Sports` (Apakah siswa mengikuti kegiatan olahraga?
+    * `Music` (Apakah siswa mengikuti kegiatan musik?)
+    * `Volunteering` (Apakah siswa mengikuti kegiatan sukarelaan?)
 2. *One Hot Ecoding* yaitu mengubah setiap kategori menjadi kolom biner terpisah untuk data tidak terurut). Variabel yang akan diproses yakni Gender.
 3. *Ordinal Encoding* yaitu memberikan nilai integer berdasarkan hierarki atau urutan kategori). Variabel yang akan diproses yakni ParentalSupport.
 Hasil setelah dilakukan data preprocessing dapat dilihat pada gambar berikut:

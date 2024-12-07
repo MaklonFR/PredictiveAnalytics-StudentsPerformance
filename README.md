@@ -41,7 +41,8 @@ Berdasarkan problem statements, berikut tujuan yang ingin dicapai pada proyek in
 Dataset yang digunakan untuk mempredisksi kinerja siswa diambil dari platform kaggle yang dapat diakses pada tautan berikut (https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset) yang dipublikasikan oleh Rabie El Kharoua pada tanggal 13 Juni 2024. Kumpulan data ini berisi informasi lengkap tentang 2.392 siswa sekolah menengah, yang merinci demografi, kebiasaan belajar, keterlibatan orang tua, kegiatan ekstrakurikuler, dan prestasi akademik mereka. Variabel target, GradeClass, mengklasifikasikan nilai siswa ke dalam kategori yang berbeda, sehingga menyediakan kumpulan data yang kuat untuk penelitian pendidikan, pemodelan prediktif, dan analisis statistik. Dataset ini terdiri dari 1 file csv.<br>
 Infromasi dataset tersebut dapat dilihat pada gambar dibawah ini:
 
-<img src="https://github.com/user-attachments/assets/32e0f6ad-799b-4949-92fe-09eb4238385d" align="center"><br>
+![info-table](https://github.com/user-attachments/assets/32e0f6ad-799b-4949-92fe-09eb4238385d)
+
 Dari gambar yang ditampilkan, terdapat 12 variabel bertipe int64 dan 3 variabel bertipe fload64
 
 ### Deskripsi Variabel
@@ -78,7 +79,8 @@ Semua kategorikal: ["Gender", "Ethnicity", "ParentalEducation", "Tutoring", "Par
 
 Tahap kedua, kita akan melihat nilai berbeda pada kolom kategorikal pada gambar tabel dibawah ini:
 
-<img src="https://github.com/user-attachments/assets/b58d3ef7-e896-470c-83b7-f32bc0352770" align="center"><br>
+![nilai-beda-data-katergorikal](https://github.com/user-attachments/assets/b58d3ef7-e896-470c-83b7-f32bc0352770)
+
 Dapat dilihat pada tabel nilai berbeda pada:
 1. Kolom gender = 2;
 2. Kolom Etnicity = 4;
@@ -93,8 +95,10 @@ Dapat dilihat pada tabel nilai berbeda pada:
     
 Tahap ketiga, Pada tahap ini, kita akan membuat visualisasi data kategorikal dalam bentuk grafik dengan menggunakan library python matplotlib. Hasilnya seperti gambar dibawah ini:
 
-<img src="https://github.com/user-attachments/assets/9f4504fb-45a8-4ce0-a932-37284fee5c81" align="center"><br>
-<img src="https://github.com/user-attachments/assets/da102c2b-ebde-4651-9e19-390056a4e2ea" align="center"><br>
+![nilai-nilai-data-kategorikal-1](https://github.com/user-attachments/assets/9f4504fb-45a8-4ce0-a932-37284fee5c81)
+
+![nilai-nilai-data-kategorikal-2](https://github.com/user-attachments/assets/da102c2b-ebde-4651-9e19-390056a4e2ea)
+
 Interpretasi:
 1. Grafik jenis kelamin, menunjukan jumlah merata antara laki-laki dan perempuan.
 2. Grafik Etnis, menunjukan mayoritas siswa berasal dari etnis kaukasia.
@@ -105,7 +109,8 @@ Interpretasi:
 
 Tahap keempat, kita akan membuat visualisasi data numerikal dalam bentuk grafik dengan menggunakan library python `matplotlib`. Hasilnya seperti gambar dibawah ini:
 
-<img src="https://github.com/user-attachments/assets/1815862b-2aa3-47c9-8213-0922092d39ae" align="center"><br>
+![data-numerikal](https://github.com/user-attachments/assets/1815862b-2aa3-47c9-8213-0922092d39ae)
+
 Interprestasi:
 1. Pada kolom Age, dapat dilihat rata-rata siswa berumur 15-17 tahun. Dapat disimpulkan tidak ada Outlier yang tersebar.
 2. Pada kolom StudyTimeWeekly, dapat dilihat bahwa rata-rata siswa memiliki waktu belajar 5-14 jam per minggu.
@@ -114,13 +119,15 @@ Interprestasi:
 
 Tahap yang kelima, kita akan melihat lebih detail mengenai jumlah dari masing-masing tingkat kelas terbaik yang menjadi target kita untuk mengetahui jumlah secara umum.
 
-<img src="https://github.com/user-attachments/assets/4c2f99ff-606c-4b5a-bbf1-17d34ed575dd" align="center"><br>
+![daftar-nilai-prestasi-kelas](https://github.com/user-attachments/assets/4c2f99ff-606c-4b5a-bbf1-17d34ed575dd)
+
 Interpretasi: 
 Kelas terbaik (GradeClass) yang ditampilkan menununjukan mayoritas prestasi siswa berada di kategori Grade F(Prestasi terendah) yakni 1211 siswa sedangkan minioritas siswa berada pada kategori Grade A (Kelas tertinggi) yakni 107
 
 Tahap keenam, kita akan melihat persebaran data dari masing-masing kategori kelas pada kolom GradeClass:
 
-<img src="https://github.com/user-attachments/assets/e66a9c49-e205-4c02-8f44-896b102faf37" align="center"><br>
+![pesebaran-gradeclass](https://github.com/user-attachments/assets/e66a9c49-e205-4c02-8f44-896b102faf37)
+
 Interpretasi:
 1. Siswa berada pada Grade F (kelas terendah) memiliki presentasi terbayak yakni 50.6%.
 2. Siswa berada pada Grade A (kelas tertinggi) memiliki presentasi sedikit yakni 4.5%.
@@ -128,7 +135,8 @@ Interpretasi:
 
 Langkah terakhir, kita akan membentuk histogram dari variabel-variabel numerikal untuk melihat persebaran data:
 
-<img src="https://github.com/user-attachments/assets/82bb4fd9-534d-4fe7-a351-7a8635583181" align="center"><br>
+![pesebaran-data-numerikal](https://github.com/user-attachments/assets/82bb4fd9-534d-4fe7-a351-7a8635583181)
+
 Interpretasi: 
 Usia, waktu belajar setiap minggu, absen dan nilai siswa cukup berdistribusi normal.
 
@@ -138,43 +146,49 @@ Pada bagian ini, akan ditunjukan hubungan antara dua variabel biasa disebut seba
 
 #### 1. Ananlisis data pada fitur numerik StudyTimeWeekly (Waktu belajar setiap minggu) dengan GPA (Nilai Prestasi)
 
-<img src="https://github.com/user-attachments/assets/e3460ee9-6449-4533-9b03-3e227749d36c" align="center"><br>
+![pengaruh-waktu-belajar-prestasi-siswa](https://github.com/user-attachments/assets/e3460ee9-6449-4533-9b03-3e227749d36c)
+
 Interpretasi:
 Siswa yang waktu belajaranya banyak mempengaruhi naiknya prestasi belajar(GPA).
 
 #### 2. Ananlisis data pada fitur numerik Absences (Ketidakhadiran) dengan GPA (Nilai Prestasi)
 
-<img src="https://github.com/user-attachments/assets/90ebe42b-3f7e-44f6-9f6d-ac41cf45c9ce" align="center"><br>
+![pengaruh-absen-prestasi-siswa](https://github.com/user-attachments/assets/90ebe42b-3f7e-44f6-9f6d-ac41cf45c9ce)
+
 Interpretasi:
 Absen(ketidakhadiran) siswa sangat mempengaruhi turun prestasinya(GPA).
 
 #### 3. Ananlisis data pada fitur kategori Tutoring (Bimbingan Belajar) dengan GradeClass (Kategori Kelas)
 
-<img src="https://github.com/user-attachments/assets/9ecf2453-805f-4757-96a5-fcf847e2ea06" align="center"><br>
+![bimbel-prestasi-siswa](https://github.com/user-attachments/assets/9ecf2453-805f-4757-96a5-fcf847e2ea06)
+
 Interpretasi:
 Banyak siswa yang tidak mengikuti bimbingan belajar yang mendapat prestasi rendah (Grade F)
 
 #### 4. Ananlisis data pada fitur kategori Genre (Jenis Kelamin) dengan GradeClass (Kategori Kelas)
 
-<img src="https://github.com/user-attachments/assets/71e91698-39b4-43c7-8eec-de9e0a342a6f" align="center"><br>
+![jk-prestasi-siswa](https://github.com/user-attachments/assets/1cf4e83f-c24e-4460-ba15-b725ce0e997f)
+
 Interpretasi:
 Jenis kelamin pria lebih dominan memiliki prestasi lebih tinggi dibandingkan dengan wanita
 
 #### 5. Ananlisis data pada fitur kategori kegiatan non akademik (Extracurricular, Sports, Music, Volunteering) dengan GPA (Nilai Prestasi)
 
-<img src="https://github.com/user-attachments/assets/684468d1-1942-4065-91cd-1c0b83923b95" align="center"><br>
+![ekstra-prestasi-siswa](https://github.com/user-attachments/assets/684468d1-1942-4065-91cd-1c0b83923b95)
+
 Interpretasi:
 Lebih banyak siswa yang tidak mengikuti kegiatan ekstrakulikuler, olahraga dan musik mempengaruhi turunya nilai pretasi(GPA) mereka
 
 #### 6. Ananlisis data pada fitur kategori ParentalSupport (Dukungan Orang Tua) dengan GradeClass (Kategori Kelas)
 
-<img src="https://github.com/user-attachments/assets/c711088d-2d29-4056-8d0c-37d5e9737d19" align="center"><br>
+![dukungan-ortu-prestasi-siswa](https://github.com/user-attachments/assets/c711088d-2d29-4056-8d0c-37d5e9737d19)
+
 Interpretasi:
 Mayoritas dukungan orang tua sangat mempengaruhin nilai prestasi siswa (GPA). Semakin tinggi dukungan orang tua, maka semakin meningkat nilai prestasi dari anaknya.
 
 #### 7. Melihat Korelasi Variabel dengan Menggunakan Heatmap
 
-<img src="https://github.com/user-attachments/assets/be45973d-5230-4db7-8f2c-eab943ff641a" align="center"><br>
+![korelasi-headmap](https://github.com/user-attachments/assets/be45973d-5230-4db7-8f2c-eab943ff641a)
 Interpretasi:
 
 Nilai Prestasi Siswa memiliki
@@ -183,7 +197,7 @@ Nilai Prestasi Siswa memiliki
 
 #### 8. Melihat Plot Scatter yang Memiliki Nilai Korelasi Positif dan Negatif
 
-<img src="https://github.com/user-attachments/assets/a4e3ecb2-be4a-4408-9f91-982e8e4535bd" align="center"><br>
+![plot-scatter-absen-study-timeweekly-gpa](https://github.com/user-attachments/assets/a4e3ecb2-be4a-4408-9f91-982e8e4535bd)
 Interpretasi:
 
 Nilai prestasi siswa (GPA) memiliki  korelasi negatif yang kuat pada ketidakhadiran (garis regresi menurun ke kanan bawah) dan korelatif positif cukup lemah pada waktu belajar setiap minggu (garis regresi naik ke kanan atas)
@@ -199,7 +213,8 @@ Pada tahap ini kita akan melakukan proses transformasi pada data sehingga menjad
 
 Pada tahap ini ada beberapa kolom pada dataset yang tidak perlu digunakan dalam pemrosesan data yakni `StudentID`, `Ethnicity` dan `ParentalEducation`. Kolom-kolom ini akan dihapus menggunakan fungsi `drop()`. Hasilnya dapat dilihat pada gambar dibawah ini:
 
-<img src="https://github.com/user-attachments/assets/69b9a96d-6baf-46da-988c-8a6897f65549" align="center"><br>
+![info-tabel-update](https://github.com/user-attachments/assets/69b9a96d-6baf-46da-988c-8a6897f65549)
+
 Hasilnya menampilkan variabel kolom `StudentID`, `Ethnicity` dan `ParentalEducation` sudah terhapus. Dataset siswa yang akan kita proses saat ini terdiri dari 2 tipe data float64, 2 tipe data int64 dan 8 tipe data objek(string).
 
 ### Encoding Fitur Kategori
@@ -216,12 +231,12 @@ Pada bagian ini, karena dataset fitur kategori kita sebelumnya sudah diubah dala
 3. *Ordinal Encoding* yaitu memberikan nilai integer berdasarkan hierarki atau urutan kategori). Variabel yang akan diproses yakni ParentalSupport.
 Hasil setelah dilakukan data preprocessing dapat dilihat pada gambar berikut:
 
-<img src="https://github.com/user-attachments/assets/632a0ef0-258b-4d2a-88d1-db70cc2c4a54" align="center"><br>
+![head-preprosesing](https://github.com/user-attachments/assets/632a0ef0-258b-4d2a-88d1-db70cc2c4a54)
 
 ### Train-Test-Split
 Langkah awal kita mengubah data objek ke data numeri dengan memanggil fungsi konversi objek to numerik. Selanjutnya, karena target kita adalah variabel GradeClass untuk mengetahui akurasi prediksi dari kategori kelas prestasi terbaik, maka kita akan membuang kolom tersebut dari data dan assign kolom tersebut ke variabel baru. Data training digunakan untuk melatih model dengan data yang ada, sedangkan data testing digunakan untuk menguji model yang dibuat menggunakan data yang belum dilatih. Pembagian data ini dilakukan dengan perbandingan 80% : 20% untuk data training dan data testing menggunakan train_test_split dari library sklearn. Berikut adalah data traning yang akan diproses (ditampilkan contoh 5 baris teratas):
 
-<img src="https://github.com/user-attachments/assets/b9facf2a-f21c-48a4-96f4-ab6d08d915cb" align="center"><br>
+![data-training-x](https://github.com/user-attachments/assets/b9facf2a-f21c-48a4-96f4-ab6d08d915cb)
 
 Kemudian, kita melihat jumlah masing-masing *GradeClass* (Kategori Kelas) pada data testing untuk selanjutnya ditransformasikan menggunakan `LabelEncoder()`. `LabelEncoder()` berfungsi untuk memetakan setiap kategori unik dalam kolom *GradeClass* menjadi angka integer mulai dari `0`
 
@@ -261,7 +276,8 @@ Pada proyek ini, penilaian model menggunakan confusion matrix, akurasi, dan f1 s
 
 1. Matriks Confusion merupakan matriks yang menunjukkan jumlah prediksi benar dan salah untuk setiap kelas. Contoh dari Matriks Confusion beserta labelnya dapat dilihat pada gambar di bawah ini.
 
-<img src="https://github.com/user-attachments/assets/0b200762-9005-4765-9924-8076faf96046" align="center"><br>
+![confusion-matrix-1](https://github.com/user-attachments/assets/0b200762-9005-4765-9924-8076faf96046)
+
 Formatnya:
 [[TP, FP],
  [FN, TN]]
@@ -275,57 +291,77 @@ Terdapat 4 label pada matriks confusion seperti yang terlihat di gambar, yaitu T
 2. Akurasi merupakan Persentase prediksi benar terhadap total prediksi.<br>
 Formatnya:
 
-<img src="https://github.com/user-attachments/assets/689a2934-4adb-42e8-b46a-e59f2e6b0508" align="center"><br>
+![format-akurasi](https://github.com/user-attachments/assets/689a2934-4adb-42e8-b46a-e59f2e6b0508)
+
 4. Skor F1 merupakan rata-rata harmonik dari precision dan recall.
 Formatnya:
 
-<img src="https://github.com/user-attachments/assets/de176d91-a6b6-40a7-adc4-dd0d755eaa16" align="center"><br>
+![scor-f1](https://github.com/user-attachments/assets/de176d91-a6b6-40a7-adc4-dd0d755eaa16)
+
 5. Precision merupakan proporsi prediksi positif yang benar-benar benar.<br>
 Rumusnya:
 
-<img src="https://github.com/user-attachments/assets/12b1ad68-e216-4bde-bce7-cfea6652e7e7" align="center"><br>
+![pressecion](https://github.com/user-attachments/assets/12b1ad68-e216-4bde-bce7-cfea6652e7e7)
+
 *Contoh*: Jika model memprediksi 10 data sebagai positif, tetapi hanya 7 yang benar-benar positif, maka precision adalah 7/10 = 0.7.
 
 5. Recall (Sensitivity) merupakan proporsi data positif yang terdeteksi dengan benar oleh model.<br>
 Rumusnya:
 
-<img src="https://github.com/user-attachments/assets/2f6d9e5d-bd59-4999-84ae-9e85146e385c" align="center"><br>
+![recall](https://github.com/user-attachments/assets/2f6d9e5d-bd59-4999-84ae-9e85146e385c)
+
 *Contoh*: Jika model memprediksi 10 data sebagai positif, tetapi hanya 7 yang benar-benar positif, maka precision adalah 7/10 = 0.7.
  
-### Penerapan Matriks Confusion, Akurasi, dan Skor f1
+### Contoh Penerapan Matriks Confusion, Akurasi, dan Skor f1
+
+Sebagai contoh praktis, jika kita memiliki hasil prediksi dari suatu model klasifikasi dengan nilai-nilai berikut:
+TP = 70
+TN = 50
+FP = 10
+FN = 20
+Kita dapat menghitung metrik yang dapat dilihat pada gambar dibawah ini:
+
+![cotoh-penerapan](https://github.com/user-attachments/assets/b1f34148-87e0-4e97-8881-f9935ff389ad)
+
+Selanjutnya kita akan terapkan pada model-model development sebagai berikut:
 
 #### 1. Model Development dengan Random Forest
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Random Forest*
 
-<img src="https://github.com/user-attachments/assets/2fefd179-4ab8-451b-bb4f-6ad86f5ee29d" align="center"><br>
+![random_forest](https://github.com/user-attachments/assets/2fefd179-4ab8-451b-bb4f-6ad86f5ee29d)
+
 Dari gambar di atas, terdapat 8 data yang diprediksi salah pada Grade A dan 14 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9269 atau ≈92.69%.
 
 #### 2. Model Development dengan XGBoots
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *XGBoots*
 
-<img src="https://github.com/user-attachments/assets/6a28e4c0-af31-4ff7-b177-cdbdf09e3ba7" align="center"><br>
+![XGBoots](https://github.com/user-attachments/assets/6a28e4c0-af31-4ff7-b177-cdbdf09e3ba7)
+
 Dari gambar di atas, terdapat 5 data yang diprediksi salah pada Grade A dan 15 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.93 dengan akurasi tepatnya adalah 0.9332 atau ≈93.32%.
 
 #### 3. Model Model Development dengan SVM
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *SVM*
 
-<img src="https://github.com/user-attachments/assets/9958e5a6-ea7f-4618-9e03-0e5404e45e22" align="center"><br>
+![svm](https://github.com/user-attachments/assets/9958e5a6-ea7f-4618-9e03-0e5404e45e22)
+
 Dari gambar di atas, terdapat 16 data yang diprediksi salah pada Grade A dan 28 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.77 dengan akurasi tepatnya adalah 0.7808 atau ≈78.08%.
 
 #### 4. Model Model Development dengan Naive Bayes
 
 Berikut merupakan matriks confusion, akurasi, dan skor f1 dari model *Naive Bayes*
 
-<img src="https://github.com/user-attachments/assets/bd837e95-d081-46cd-a221-17f51ce7af33" align="center"><br>
+![naive](https://github.com/user-attachments/assets/bd837e95-d081-46cd-a221-17f51ce7af33)
+
 Dari gambar di atas, terdapat 19 data yang diprediksi salah pada Grade A dan 13 data yang diprediksi salah pada Grade F. Diperoleh skor F1 nya adalah 0.79 dengan akurasi tepatnya adalah 0.7933 atau ≈79.33%.
 
 ### Hasil Evaluasi
 Dari seluruh akurasi yang diketahui dari keempat model, dibentuk bar plot untuk melihat perbandingan nilai akurasi model sebagai berikut. 
 
-<img src="https://github.com/user-attachments/assets/c0584047-c778-4d72-a451-b48e44764df5" align="center"><br>
+![barplot](https://github.com/user-attachments/assets/c0584047-c778-4d72-a451-b48e44764df5)
+
 Berdasarkan gambar di atas dan evaluasi masing-masing model untuk mengetahui skor akurasi, skor F1, dan jumlah kesalahan klasifikasi pada masing-masing model, didapat model *XGBoots* merupakan model terbaik karena memiliki skor akurasi dan skor F1 tertinggi, serta jumlah kesalahan klasifikasi yang paling sedikit, terutama pada Grade A. 
 
 ## Kesimpulan
@@ -347,3 +383,4 @@ Berdasarkan hasil yang diperoleh setelah melakukan proses EDA dan pengujiaan mod
 1. Abdul Rahman. "Klasifikasi Performa Akademik Siswa Menggunakan Metode Decision Tree dan Naive Bayes", Vol. 13 No.1 (2023) 22-31, ISSN 2503-3247. SINTA Peringkat 4, diakses pada 28 November 2024.
 2. Dicoding. Diakses pada 6 Juli 2024 dari https://www.dicoding.com/academies/319-machine-learning-terapan
 3. Arif Fahrudin1, Harco Leslie Hendric Spits Warnars. "Prediksi Performa Siswa Dengan Metode SAW", vol. 9, no. 1, 2020, P-ISSN 2089-1245, E-ISSN 2655-4925. KILAT, diakses pada 29 November 2024.
+4. Random Forest Classification with Scikit-Learn. Tersedia: [tautan](https://www.datacamp.com/tutorial/random-forests-classifier-python). Diakses pada: Desember 2024.
